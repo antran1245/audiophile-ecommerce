@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* 
+  Global Styles
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Manrope', normal;
+  color: theme('colors.000000');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global Text Styles */
+h1, h2, h3, h4, h5, h6, .subtitle {
+  font-weight: 700;
+}
+h1 {
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+h4 {
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+h5 {
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+h6 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+.overline {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  font-weight: 400;
+  color: theme('colors.D87D4A');
+}
+.subtitle {
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: theme('colors.D87D4A');
+}
+.body {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Button styles */
+.button-1, .button-2, .button-3 {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.button-1 {
+  background-color: theme('colors.D87D4A');
+  border: 1px solid theme('colors.D87D4A');
+  color: theme('colors.FFFFFF');
+}
+.button-1:hover {
+  background-color: theme('colors.FBAF85');
+  border: 1px solid theme('colors.FBAF85');
+}
+.button-2 {
+  background-color: theme('colors.FFFFFF');
+  border: 1px solid theme('colors.000000');
+}
+.button-2:hover {
+  background-color: theme('colors.000000');
+  color: theme('colors.FFFFFF');
+}
+.button-3 {
+  color: rgba(theme('colors.000000'), 0.5);
+}
+.button-3:hover {
+  color: rgba(theme('colors.D87D4A'), 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form styles */
+.form-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.form-group .form-label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  border: 1px solid theme('colors.CFCFCF');
+}
+input:active, input[type=radio]:hover{
+  border: 1px solid theme('colors.D87D4A');
+}
+.form-group input[type=text] {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  padding-left: 24px;
+  color: theme('colors.000000');
+  caret-color: theme('colors.D87D4A');
+}
+.form-group .form-label {
+  color: theme('colors.CD2C2C');
+}
+input[type=text].error {
+  border: 1px solid theme('colors.CD2C2C');
+}
+input[type=checkbox] {
+  accent-color: theme('colors.D87D4A');
 }
