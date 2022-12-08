@@ -13,6 +13,12 @@ module.exports = {
       'CD2C2C': '#CD2C2C',
       'CFCFCF': '#CFCFCF'
     },
+    screens: {
+      'xs': {'max': '480px'},
+      'sm': {'max': '768px'},
+      'md': {'max': '1024px'},
+      'lg': {'max': '1200px'}
+    },
     extend: {},
   },
   plugins: [],
