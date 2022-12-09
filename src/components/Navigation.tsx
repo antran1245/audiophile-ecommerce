@@ -12,12 +12,12 @@ export default function Navigation() {
     const [show, setShow] = useState<boolean>(false)
 
     return(
-        <div id="container" className='xs:rounded-b-[8px]'>
+        <div id="container" className='bg-[#0E0E0E]'>
             {/* Default web nav */}
-            <nav className='bg-000000 flex md:justify-between justify-evenly pt-[32px] pb-[36px] sm:pb-[32px] md:px-[40px] xs:px-[24px] xs:rounded-b-[8px]'>
+            <nav className='w-[70%] md:w-[100%] m-auto flex md:justify-between justify-between pt-[32px] pb-[36px] sm:pb-[32px] md:px-[40px] xs:px-[24px] xs:rounded-b-[8px] border-b-[1px] border-FFFFFF/20 xs:border-b-0'>
                 <div className='flex items-center'>
                     <img src={hamburger} alt='hamburger icon' className='hidden xs:mr-[0] md:block md:mr-[42px] cursor-pointer' onClick={() => setShow(!show)}/>
-                    <img src={logo} alt='logo' className='block sm:hidden cursor-pointer'/>
+                    <img src={logo} alt='logo' className='block xs:hidden cursor-pointer'/>
                 </div>
                 <img src={logo} alt='logo' className='hidden xs:block cursor-pointer'/>
                 <div className='block md:hidden'>
@@ -30,7 +30,7 @@ export default function Navigation() {
             </nav>
             {/* Tablet/Mobile nav */}
             {/* White scroll down box letting people to navigate to different box */}
-            <div className={`${show? 'down' : 'up'} hidden md:flex bg-FFFFFF flex-row xs:flex-col pt-[56px] pb-[67px] px-[39px]`}>
+            <div className={`${show? 'down' : 'up'} hidden md:flex bg-FFFFFF flex-row xs:flex-col pt-[56px] pb-[67px] px-[39px] xs:rounded-b-[8px]`}>
                 <div className='relative w-[33%] xs:w-full h-[217px] m-auto xs:mb-[16px]'>
                     <div className='w-full absolute z-[2] flex justify-center top-[-10px] xs:top-[0]'>
                         <img src={headphones} alt="headphones" className='w-[70%] xs:w-[50%]'/>
