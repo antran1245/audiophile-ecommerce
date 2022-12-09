@@ -42,7 +42,7 @@ h6 {
   line-height: 24px;
   letter-spacing: 1.3px;
 }
-.overline {
+.overline-text {
   font-size: 14px;
   line-height: 19px;
   letter-spacing: 10px;
@@ -70,6 +70,7 @@ h6 {
   background-color: theme('colors.D87D4A');
   border: 1px solid theme('colors.D87D4A');
   color: theme('colors.FFFFFF');
+  padding: 15px 30px;
 }
 .button-1:hover {
   background-color: theme('colors.FBAF85');
@@ -122,4 +123,12 @@ input[type=text].error {
 }
 input[type=checkbox] {
   accent-color: theme('colors.D87D4A');
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 1.29px;
+  }
 }
