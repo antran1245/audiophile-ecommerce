@@ -12,7 +12,7 @@ export default function Navigation() {
     const [show, setShow] = useState<boolean>(false)
 
     return(
-        <div id="container" className='bg-[#0E0E0E]'>
+        <div id="container" className='bg-[#191919]'>
             {/* Default web nav */}
             <nav className='w-[70%] md:w-[100%] m-auto flex md:justify-between justify-between pt-[32px] pb-[36px] sm:pb-[32px] md:px-[40px] xs:px-[24px] xs:rounded-b-[8px] border-b-[1px] border-FFFFFF/20 xs:border-b-0'>
                 <div className='flex items-center'>
