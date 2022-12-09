@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     colors: {
       'D87D4A': '#D87D4A',
-      '#101010': '#101010',
+      '101010': '#101010',
       'F1F1F1': '#F1F1F1',
       'FAFAFA': '#FAFAFA',
       'FBAF85': '#FBAF85',
@@ -14,10 +14,10 @@ module.exports = {
       'CFCFCF': '#CFCFCF'
     },
     screens: {
-      'xs': {'max': '480px'},
-      'sm': {'max': '768px'},
+      'lg': {'max': '1200px'},
       'md': {'max': '1024px'},
-      'lg': {'max': '1200px'}
+      'sm': {'max': '768px'},
+      'xs': {'max': '480px'},
     },
     extend: {},
   },

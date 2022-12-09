@@ -47,13 +47,11 @@ h6 {
   line-height: 19px;
   letter-spacing: 10px;
   font-weight: 400;
-  color: theme('colors.D87D4A');
 }
 .subtitle {
   font-size: 13px;
   line-height: 25px;
   letter-spacing: 1px;
-  color: theme('colors.D87D4A');
 }
 .body {
   font-size: 15px;
@@ -87,6 +85,7 @@ h6 {
 }
 .button-3 {
   color: rgba(theme('colors.000000'), 0.5);
+  cursor: pointer;
 }
 .button-3:hover {
   color: rgba(theme('colors.D87D4A'), 0.5);
