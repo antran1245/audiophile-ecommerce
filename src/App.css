@@ -125,7 +125,7 @@ input[type=checkbox] {
   accent-color: theme('colors.D87D4A');
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 36px;
     line-height: 40px;

@@ -14,6 +14,7 @@ module.exports = {
       'CFCFCF': '#CFCFCF'
     },
     screens: {
+      'xl': {'max': '1400px'},
       'lg': {'max': '1200px'},
       'md': {'max': '1024px'},
       'sm': {'max': '768px'},
