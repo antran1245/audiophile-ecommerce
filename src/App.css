@@ -77,12 +77,14 @@ h6 {
   border: 1px solid theme('colors.FBAF85');
 }
 .button-2 {
-  background-color: theme('colors.FFFFFF');
+  background-color: theme('colors.000000');
   border: 1px solid theme('colors.000000');
+  color: theme('colors.FFFFFF');
+  padding: 15px 30px;
 }
 .button-2:hover {
-  background-color: theme('colors.000000');
-  color: theme('colors.FFFFFF');
+  background-color: theme('colors.4C4C4C');
+  border: 1px solid theme('colors.4C4C4C');
 }
 .button-3 {
   color: rgba(theme('colors.000000'), 0.5);

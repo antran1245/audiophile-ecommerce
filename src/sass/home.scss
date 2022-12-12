@@ -12,7 +12,6 @@
         .card {
             @apply relative;
             @apply flex flex-col items-center;
-            @apply m-auto;
             @apply w-[30%] xl:w-[31.5%] lg:w-[33%] xs:w-full;
             @apply h-[284px] lg:h-[217px];
 
