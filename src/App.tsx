@@ -1,16 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/shared/Navigation';
 import Home from './components/Home';
 import Footer from './components/shared/Footer';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navigation/>
-      <Home/>
+      <Routes>
+        <Route path='' element={<Home/>}/>
+      </Routes>
       <Footer/>
-    </div>
+    </BrowserRouter>
   );
 }
 
