@@ -1,9 +1,6 @@
-import React from "react";
-import earphones from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
-import headphones from "../assets/shared/desktop/image-category-thumbnail-headphones.png";
-import speakers from "../assets/shared/desktop/image-category-thumbnail-speakers.png";
-import arrow from "../assets/shared/desktop/icon-arrow-right.svg";
 import circles from "../assets/home/desktop/pattern-circles.svg";
+import ShopOptions from "./shared/ShopOptions";
+import BestAudio from "./shared/BestAudio";
 import "../sass/home.scss";
 
 export default function Home() {
@@ -17,9 +14,9 @@ export default function Home() {
         <div className="relative flex w-[70%] items-center md:w-[100%] md:justify-center">
           <div className="absolute z-[2] w-[40%] xl:w-[50%] md:text-center xs:w-[80%]">
             <p className="overline-text text-FFFFFF/50">NEW PRODUCT</p>
-            <h1 className="mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
+            <p className="heading1 mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
               XX99 Mark II Headphones
-            </h1>
+            </p>
             <p className="body mt-[24px] text-FFFFFF/75 lg:mt-[10px] md:mt-[24px]">
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
@@ -45,43 +42,8 @@ export default function Home() {
           />
         </div>
       </section>
-
-      {/* 
-        Shop options
-        Pass Tailwind CSS classes from sass file, home.scss, to elements.
-      */}
-      <section id="shop">
-        <div className={`cards-container`}>
-          <div className="card">
-            <img src={headphones} alt="headphones" />
-            <div>
-              <p className="nav-title">HEADPHONES</p>
-              <p className="button-3">
-                SHOP <img src={arrow} alt="arrow" className="ml-[13px]" />
-              </p>
-            </div>
-          </div>
-          <div className="card m-auto">
-            <img src={speakers} alt="speakers" />
-            <div>
-              <p className="nav-title">SPEAKERS</p>
-              <p className="button-3">
-                SHOP <img src={arrow} alt="arrow" className="ml-[13px]" />
-              </p>
-            </div>
-          </div>
-          <div className="card">
-            <img src={earphones} alt="earphones" />
-            <div>
-              <p className="nav-title">EARPHONES</p>
-              <p className="button-3">
-                SHOP <img src={arrow} alt="arrow" className="ml-[13px]" />
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* shop options for headphone, speaker, earphone */}
+      <ShopOptions/>
       {/* 
         ZX9 Speaker Box
       */}
@@ -92,8 +54,7 @@ export default function Home() {
           alt="circles"
           className="lg:block hidden absolute z-[1] bottom-0 xl:w-[100%] lg:top-[-30%] md:top-[-25%] sm:top-[-15%] xs:top-[-10%]"
         />
-        <div className="relative flex w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">
-          
+        <div className="relative flex w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">         
           <img
             src={circles}
             alt="circles"
@@ -116,9 +77,9 @@ export default function Home() {
             className="relative z-[1] hidden w-[40%] max-w-[410px] xs:block "
           />
           <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center xs:mb-[0] sm:w-[70%]">
-            <h1 className="mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
+            <p className="heading1 mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
               ZX9 SPEAKER
-            </h1>
+            </p>
             <p className="body mt-[24px] mb-[40px] text-FFFFFF xs:mb-[24px]">
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
@@ -132,7 +93,7 @@ export default function Home() {
       */}
       <section id="speaker-short" className="flex justify-center">
         <div className="w-[70%] xl:w-[80%] lg:w-[90%] py-[101px] px-[95px] md:px-[62px] xs:px-[24px]">
-          <h4>ZX7 SPEAKER</h4>
+          <p className="heading4">ZX7 SPEAKER</p>
           <button className="button-2 md:mt-[32px]">SEE PRODUCT</button>
         </div>
       </section>
@@ -145,20 +106,13 @@ export default function Home() {
             <source media="(max-width: 1024px) and (min-width: 480px)" srcSet={require('../assets/home/tablet/image-earphones-yx1.jpg')}/>
             <source media="(max-width: 480px) " srcSet={require('../assets/home/mobile/image-earphones-yx1.jpg')}/>
             <img
-            src={`${require('../assets/home/desktop/image-earphones-yx1.jpg')}`}
+            src={require('../assets/home/desktop/image-earphones-yx1.jpg')}
             alt="earphone"
             className="w-[100%] xs:w-[100%] h-[100%] rounded-[8px]"
             />
           </picture>
-          {/* <img
-            src={require('../assets/home/tablet/image-earphones-yx1.jpg')}
-            srcSet={`${require('../assets/home/tablet/image-earphones-yx1.jpg')} 1024w, ${require('../assets/home/mobile/image-earphones-yx1.jpg')} 480w`}
-            alt="earphone"
-            className="w-[49%] h-[100%] rounded-[8px] xs:w-[100%] hidden md:block"
-            sizes="(max-width: 1024px) 1024px, (max-width: 480px) 480px"
-          /> */}
           <div className="w-[49%] xs:w-[100%] h-[100%] xs:h-auto bg-F1F1F1 rounded-[8px] py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:py-[41px] xs:pl-[24px] xs:pr-[56px] xs:mt-[24px]">
-            <h4>YX1 EARPHONES</h4>
+            <p className="heading4">YX1 EARPHONES</p>
             <button className="button-2 mt-[32px]">SEE PRODUCT</button>
           </div>
         </div>
@@ -166,20 +120,7 @@ export default function Home() {
       {/*
         Bringing you the best audio gear
       */}
-      <section className="mt-[200px] flex justify-center">
-        <div className="w-[70%] xl:w-[80%] lg:w-[90%] flex items-center justify-between xs:flex-col">
-          <div className="w-[50%] pr-[125px]">
-            <h2>BRINGING YOU THE <span className="text-D87D4A">BEST</span> AUDIO GEAR</h2>
-            <p className="body mt-[32px]">Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
-          </div>
-          <img
-          srcSet={`${require('../assets/shared/desktop/image-best-gear.jpg')} 100w, ${require('../assets/shared/tablet/image-best-gear.jpg')} 1024w, ${require('../assets/shared/mobile/image-best-gear.jpg')} 480w`}
-          alt="best gear"
-          className="w-[50%] h-[100%] rounded-[8px]"
-          sizes="(max-width: 100vw) 100vw, (max-width: 1024px) 1024px, (max-width: 480px) 480px"
-          />
-        </div>
-      </section>
+      <BestAudio/>
     </main>
   );
 }

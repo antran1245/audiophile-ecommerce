@@ -9,54 +9,60 @@
 }
 
 /* Global Text Styles */
-h1, h2, h3, h4, h5, h6, .subtitle {
-  font-weight: 700;
-}
-h1 {
-  font-size: 56px;
-  line-height: 58px;
-  letter-spacing: 2px;
-}
-h2 {
-  font-size: 40px;
-  line-height: 44px;
-  letter-spacing: 1.5px;
-}
-h3 {
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 1.15px;
-}
-h4 {
-  font-size: 28px;
-  line-height: 38px;
-  letter-spacing: 2px;
-}
-h5 {
-  font-size: 24px;
-  line-height: 33px;
-  letter-spacing: 1.7px;
-}
-h6 {
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 1.3px;
-}
-.overline-text {
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 10px;
-  font-weight: 400;
-}
-.subtitle {
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-.body {
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: 500;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading1, .heading2, .heading3, .heading4, .heading5, .heading6, .subtitle {
+    font-weight: 700;
+  }
+  .heading1 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+  .heading2 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+  }
+  .heading3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+  }
+  .heading4 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
+  .heading5 {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+  }
+  .heading6 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+  }
+  .overline-text {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    font-weight: 400;
+  }
+  .subtitle {
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  .body {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+  }
 }
 
 /* Button styles */
@@ -128,7 +134,7 @@ input[type=checkbox] {
 }
 
 @media only screen and (max-width: 768px) {
-  h1 {
+  .heading1 {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 1.29px;

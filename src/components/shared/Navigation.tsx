@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import logo from '../assets/shared/desktop/logo.svg'
-import cart from '../assets/shared/desktop/icon-cart.svg'
-import hamburger from '../assets/shared/tablet/icon-hamburger.svg'
-import earphones from  '../assets/shared/desktop/image-category-thumbnail-earphones.png'
-import headphones from  '../assets/shared/desktop/image-category-thumbnail-headphones.png'
-import speakers from  '../assets/shared/desktop/image-category-thumbnail-speakers.png'
-import arrow from '../assets/shared/desktop/icon-arrow-right.svg'
-import '../sass/navigation.scss'
+import logo from '../../assets/shared/desktop/logo.svg'
+import cart from '../../assets/shared/desktop/icon-cart.svg'
+import hamburger from '../../assets/shared/tablet/icon-hamburger.svg'
+import earphones from  '../../assets/shared/desktop/image-category-thumbnail-earphones.png'
+import headphones from  '../../assets/shared/desktop/image-category-thumbnail-headphones.png'
+import speakers from  '../../assets/shared/desktop/image-category-thumbnail-speakers.png'
+import arrow from '../../assets/shared/desktop/icon-arrow-right.svg'
+import '../../sass/navigation.scss'
 
 export default function Navigation() {
     const [show, setShow] = useState<boolean>(false)
