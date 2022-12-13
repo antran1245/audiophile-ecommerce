@@ -1,6 +1,6 @@
 export default function BestAudio() {
     return (
-        <section className="mt-[200px] flex justify-center md:mt-[120px]">
+        <section className="my-[200px] flex justify-center md:my-[96px] sm:my-[120px]">
             <div className="flex w-[70%] items-center justify-between xl:w-[80%] lg:w-[90%] md:flex-col">
                 <div className="w-[50%] pr-[125px] md:w-[100%] md:order-2 md:mt-[63px] md:text-center md:pr-0 sm:mt-[40px]">
                     <p className="heading2 sm:heading4 md:w-[60%] md:mx-auto sm:w-[90%] test1 sm:test2">
@@ -28,7 +28,7 @@ export default function BestAudio() {
                     <img
                         src={require("../../assets/shared/desktop/image-best-gear.jpg")}
                         alt="best gear"
-                        className="rounded-[8px]"
+                        className="rounded-[8px] w-[100%]"
                     />
                 </picture>
             </div>
