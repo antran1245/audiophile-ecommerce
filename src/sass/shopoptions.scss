@@ -16,23 +16,28 @@
             @apply h-[284px] lg:h-[217px];
 
             img {
-                @apply relative z-[2];
+                @apply relative z-[2] cursor-pointer;
                 @apply xs:mt-[10px];
                 @apply w-[60%] xs:w-[40%] sm:w-[90%] md:w-[60%] lg:w-[50%] xl:w-[80%];
             }
 
             div {
-                @apply bg-F1F1F1 rounded-[8px] absolute bottom-0;
+                @apply bg-F1F1F1 rounded-[8px] absolute bottom-0 cursor-pointer;
                 @apply flex justify-end items-center flex-col;
                 @apply w-full;
                 @apply h-[204px] lg:h-[165px];
                 
                 .nav-title {
-                    @apply mb-[17px] cursor-pointer z-[3];
+                    @apply mb-[17px] z-[3];
                 }
                 p:not(.nav-title) {
                     @apply flex items-center mb-[22px] z-[3];
                 }
+            }
+        }
+        .card:hover {
+            .button-3 {
+                @apply text-D87D4A;
             }
         }
     }
