@@ -45,6 +45,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       {/* 
         Shop options
         Pass Tailwind CSS classes from sass file, home.scss, to elements.
@@ -80,41 +81,41 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* 
-        ZX9 SPEAKER Box
-      */}
-      <section className="relative flex justify-center overflow-hidden pt-[168px]">
 
+      {/* 
+        ZX9 Speaker Box
+      */}
+      <section className="relative flex justify-center overflow-hidden mt-[168px] md:mt-[96px] xs:mt-[120px]">
         {/* Ring behind the speaker */}
         <img
           src={circles}
           alt="circles"
-          className="absolute z-[1] hidden lg:left-0 lg:top-[-10%] lg:block lg:h-[120%] md:top-[-20%] md:h-[120%] sm:top-[0%] sm:right-0 sm:h-[90%] sm:w-[100%] xs:top-[10%] xs:h-[65%] xs:w-[200%]"
+          className="lg:block hidden absolute z-[1] bottom-0 xl:w-[100%] lg:top-[-30%] md:top-[-25%] sm:top-[-15%] xs:top-[-10%]"
         />
-        <div className="relative flex h-[100%] w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">
+        <div className="relative flex w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">
           
           <img
             src={circles}
             alt="circles"
-            className="absolute top-[-4%] left-[-5%] z-[1] block w-[70%] xl:w-[90%] xl:left-[-13%] lg:hidden"
+            className="absolute z-[1] fit-content left-[-5%] top-0 lg:hidden block"
             />
           {/* Speaker image depending on the size of screen (desktop, tablet, mobile) */}
           <img
             src={require("../assets/home/desktop/image-speaker-zx9.png")}
             alt="speaker zx9"
-            className="relative z-[1] mb-[-29px] block w-[100%] max-w-[410px] xl:h-[100%] xl:w-[35%] md:hidden"
+            className="relative z-[1] mb-[-29px] block w-[100%] max-w-[410px] xl:w-[35%] md:hidden"
           />
           <img
             src={require("../assets/home/tablet/image-speaker-zx9.png")}
             alt="speaker zx9"
-            className="relative z-[1] hidden w-[20%] max-w-[410px] md:block xs:hidden"
+            className="relative z-[1] hidden w-[30%] max-w-[410px] md:block xs:hidden"
           />
           <img
             src={require("../assets/home/mobile/image-speaker-zx9.png")}
             alt="speaker zx9"
-            className="relative z-[1] hidden w-[30%] max-w-[410px] xs:block "
+            className="relative z-[1] hidden w-[40%] max-w-[410px] xs:block "
           />
-          <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center xs:mb-[0] xs:w-[60%]">
+          <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center xs:mb-[0] sm:w-[70%]">
             <h1 className="mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
               ZX9 SPEAKER
             </h1>
@@ -126,6 +127,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* 
+        ZX7 Speaker Box
+      */}
+      <section id="speaker-short" className="flex justify-center">
+        <div className="w-[70%] xl:w-[80%] lg:w-[90%] py-[101px] px-[95px] md:px-[62px] xs:px-[24px]">
+          <h4>ZX7 SPEAKER</h4>
+          <button className="button-2 md:mt-[32px]">SEE PRODUCT</button>
+        </div>
+      </section>
+      {/* 
+        YX1 Earphones
+      */}
+      <section className="mt-[48px] flex justify-center">
+        <div className="w-[70%] xl:w-[80%] lg:w-[90%] flex items-center justify-between xs:flex-col">
+          <img
+            srcSet={`${require('../assets/home/desktop/image-earphones-yx1.jpg')}, ${require('../assets/home/tablet/image-earphones-yx1.jpg')} 1024px, ${require('../assets/home/mobile/image-earphones-yx1.jpg')} 480px`}
+            alt="earphone"
+            className="w-[49%] h-[100%] rounded-[8px] xs:w-[100%]"/>
+          <div className="w-[49%] xs:w-[100%] h-[100%] bg-F1F1F1 rounded-[8px] py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:py-[41px] xs:pl-[24px] xs:pr-[56px] xs:mt-[24px]">
+            <h4>YX1 EARPHONES</h4>
+            <button className="button-2 mt-[32px]">SEE PRODUCT</button>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

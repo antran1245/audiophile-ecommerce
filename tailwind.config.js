@@ -12,7 +12,8 @@ module.exports = {
       '000000': '#000000',
       'CD2C2C': '#CD2C2C',
       'CFCFCF': '#CFCFCF',
-      '4C4C4C': '#4C4C4C'
+      '4C4C4C': '#4C4C4C',
+      '979797': '#979797'
     },
     screens: {
       'xl': {'max': '1400px'},

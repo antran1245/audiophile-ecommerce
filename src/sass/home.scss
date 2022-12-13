@@ -2,7 +2,7 @@
 #shop {
     @apply flex;
     @apply justify-center;
-    @apply mt-[120px] xs:mt-0;
+    @apply mt-[120px] md:mt-[96px] xs:mt-[40px];
 
     .cards-container {
         @apply flex items-end;
@@ -34,6 +34,36 @@
                     @apply flex items-center mb-[22px] z-[3];
                 }
             }
+        }
+    }
+}
+
+#speaker-short {
+    margin-top: 48px;
+    & > div {
+        background: url(../assets/home/desktop/image-speaker-zx7.jpg) center right no-repeat;
+        background-color: #CFCFCF;
+        background-blend-mode: darken;
+        background-size: auto 100%;
+        border-radius: 8px;
+    }
+}
+@media only screen and (max-width: theme('screens.md.max')) {
+    #speaker-short {
+        & > div {
+            background-image: url(../assets/home/tablet/image-speaker-zx7.jpg);
+        }
+        .button-2 {
+            border-color: theme('colors.000000');
+            background-color: transparent;
+            color: theme('colors.000000');
+        }
+    }
+}
+@media only screen and (max-width: theme('screens.xs.max')) {
+    #speaker-short {
+        & > div {
+            background-image: url(../assets/home/mobile/image-speaker-zx7.jpg);
         }
     }
 }
