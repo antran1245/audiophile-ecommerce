@@ -141,17 +141,45 @@ export default function Home() {
       */}
       <section className="mt-[48px] flex justify-center">
         <div className="w-[70%] xl:w-[80%] lg:w-[90%] flex items-center justify-between xs:flex-col">
-          <img
-            srcSet={`${require('../assets/home/desktop/image-earphones-yx1.jpg')}, ${require('../assets/home/tablet/image-earphones-yx1.jpg')} 1024px, ${require('../assets/home/mobile/image-earphones-yx1.jpg')} 480px`}
+          <picture className="w-[49%] h-[100%] xs:w-[100%]">
+            <source media="(max-width: 1024px) and (min-width: 480px)" srcSet={require('../assets/home/tablet/image-earphones-yx1.jpg')}/>
+            <source media="(max-width: 480px) " srcSet={require('../assets/home/mobile/image-earphones-yx1.jpg')}/>
+            <img
+            src={`${require('../assets/home/desktop/image-earphones-yx1.jpg')}`}
             alt="earphone"
-            className="w-[49%] h-[100%] rounded-[8px] xs:w-[100%]"/>
-          <div className="w-[49%] xs:w-[100%] h-[100%] bg-F1F1F1 rounded-[8px] py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:py-[41px] xs:pl-[24px] xs:pr-[56px] xs:mt-[24px]">
+            className="w-[100%] xs:w-[100%] h-[100%] rounded-[8px]"
+            />
+          </picture>
+          {/* <img
+            src={require('../assets/home/tablet/image-earphones-yx1.jpg')}
+            srcSet={`${require('../assets/home/tablet/image-earphones-yx1.jpg')} 1024w, ${require('../assets/home/mobile/image-earphones-yx1.jpg')} 480w`}
+            alt="earphone"
+            className="w-[49%] h-[100%] rounded-[8px] xs:w-[100%] hidden md:block"
+            sizes="(max-width: 1024px) 1024px, (max-width: 480px) 480px"
+          /> */}
+          <div className="w-[49%] xs:w-[100%] h-[100%] xs:h-auto bg-F1F1F1 rounded-[8px] py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:py-[41px] xs:pl-[24px] xs:pr-[56px] xs:mt-[24px]">
             <h4>YX1 EARPHONES</h4>
             <button className="button-2 mt-[32px]">SEE PRODUCT</button>
           </div>
         </div>
       </section>
-
+      {/*
+        Bringing you the best audio gear
+      */}
+      <section className="mt-[200px] flex justify-center">
+        <div className="w-[70%] xl:w-[80%] lg:w-[90%] flex items-center justify-between xs:flex-col">
+          <div className="w-[50%] pr-[125px]">
+            <h2>BRINGING YOU THE <span className="text-D87D4A">BEST</span> AUDIO GEAR</h2>
+            <p className="body mt-[32px]">Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
+          </div>
+          <img
+          srcSet={`${require('../assets/shared/desktop/image-best-gear.jpg')} 100w, ${require('../assets/shared/tablet/image-best-gear.jpg')} 1024w, ${require('../assets/shared/mobile/image-best-gear.jpg')} 480w`}
+          alt="best gear"
+          className="w-[50%] h-[100%] rounded-[8px]"
+          sizes="(max-width: 100vw) 100vw, (max-width: 1024px) 1024px, (max-width: 480px) 480px"
+          />
+        </div>
+      </section>
     </main>
   );
 }
