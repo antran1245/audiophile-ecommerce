@@ -15,7 +15,7 @@ export default function Navigation() {
     
     const transferToPage = (page : string) => {
         setShow(false)
-        navigate('/'+page)
+        navigate('/Category/'+page)
     }
     return(
         <div id="container" className='absolute top-0 left-0 z-[4] w-full'>
@@ -28,7 +28,7 @@ export default function Navigation() {
                 <img src={logo} alt='logo' className='hidden xs:block cursor-pointer'/>
                 <div className='block md:hidden'>
                     <Link to=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HOME</Link>
-                    <Link to='/headphones' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</Link>
+                    <Link to='/Category/headphones' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</Link>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>SPEAKERS</a>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A'>EARPHONES</a>
                 </div>
