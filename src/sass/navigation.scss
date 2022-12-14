@@ -6,7 +6,7 @@
     letter-spacing: 1.1px;
 }
 .up {
-    display: none;
+    display: none !important;
 }
 .down {
     animation: roll .5s ease-in-out;

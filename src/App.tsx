@@ -9,12 +9,14 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
+    <div className='relative'>
       <Navigation/>
       <Routes>
         <Route path='' element={<Home/>}/>
         <Route path='/headphone' element={<Headphones/>}/>
       </Routes>
       <Footer/>
+    </div>
     </BrowserRouter>
   );
 }

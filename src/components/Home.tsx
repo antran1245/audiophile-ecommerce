@@ -10,30 +10,30 @@ export default function Home() {
         Top heading -> headphone black background with switching image based on size of screen
         Text will place onto the background image using absolute position
       */}
-      <section className="flex justify-center bg-[#191919]">
+      <section className="flex justify-center bg-[#191919] relative">
         <div className="relative flex w-[70%] items-center md:w-[100%] md:justify-center">
-          <div className="absolute z-[2] w-[40%] xl:w-[50%] md:text-center xs:w-[80%]">
+          <div className="absolute z-[2] w-[40%] xl:w-[50%] md:text-center sm:w-[60%] xs:w-[80%] xl:mt-[8vw]">
             <p className="overline-text text-FFFFFF/50">NEW PRODUCT</p>
-            <p className="heading1 mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
+            <p className="heading1 mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px] xsm:mt-[10px] s:mt-[24px]">
               XX99 Mark II Headphones
             </p>
-            <p className="body mt-[24px] text-FFFFFF/75 lg:mt-[10px] md:mt-[24px]">
+            <p className="body mt-[24px] text-FFFFFF/75 lg:mt-[10px] md:mt-[24px] sm:mt-[10px] xs:mt-[24px]">
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <button className="button-1 mt-[40px] lg:mt-[10px] md:mt-[40px]">
+            <button className="button-1 mt-[40px] lg:mt-[10px] md:mt-[40px] sm:mt-[10px] xs:mt-[28px]">
               SEE PRODUCT
             </button>
           </div>
           <img
             src={require("../assets/home/desktop/image-hero.jpg")}
             alt="headphone"
-            className="ml-[100px] md:hidden"
+            className="ml-[100px] md:hidden lg:mt-[100px]"
           />
           <img
             src={require("../assets/home/tablet/image-header.jpg")}
             alt="headphone"
-            className="hidden md:block xs:hidden"
+            className="hidden md:block xs:hidden sm:mt-[50px] xs:mt-0"
           />
           <img
             src={require("../assets/home/mobile/image-header.jpg")}
