@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../assets/shared/desktop/logo.svg'
 import cart from '../../assets/shared/desktop/icon-cart.svg'
 import hamburger from '../../assets/shared/tablet/icon-hamburger.svg'
@@ -11,7 +11,12 @@ import '../../sass/navigation.scss'
 
 export default function Navigation() {
     const [show, setShow] = useState<boolean>(false)
-
+    const navigate = useNavigate()
+    
+    const transferToPage = (page : string) => {
+        setShow(false)
+        navigate('/'+page)
+    }
     return(
         <div id="container" className='absolute top-0 left-0 z-[4] w-full'>
             {/* Default web nav */}
@@ -23,7 +28,7 @@ export default function Navigation() {
                 <img src={logo} alt='logo' className='hidden xs:block cursor-pointer'/>
                 <div className='block md:hidden'>
                     <Link to=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HOME</Link>
-                    <Link to='/headphone' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</Link>
+                    <Link to='/headphones' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</Link>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>SPEAKERS</a>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A'>EARPHONES</a>
                 </div>
@@ -31,14 +36,14 @@ export default function Navigation() {
             </nav>
             {/* Tablet/Mobile nav */}
             {/* White scroll down box letting people to navigate to different box */}
-            <div className={`${show? 'down' : 'up'} hidden md:flex bg-FFFFFF flex-row xs:flex-col pt-[56px] pb-[67px] px-[39px] xs:rounded-b-[8px]`}>
+            <div className={`${show? 'down md:flex' : 'up'} hidden bg-FFFFFF flex-row xs:flex-col pt-[56px] pb-[67px] px-[39px] xs:rounded-b-[8px]`}>
                 <div className='relative w-[33%] xs:w-full h-[217px] m-auto xs:mb-[16px]'>
                     <div className='w-full absolute z-[2] flex justify-center top-[-10px] xs:top-[0]'>
                         <img src={headphones} alt="headphones" className='w-[70%] xs:w-[50%]'/>
                     </div>
                     <div className='h-[165px] w-full bg-F1F1F1 absolute bottom-0 rounded-[8px] flex justify-end items-center flex-col'>
                         <p className='nav-title mb-[17px] cursor-pointer z-[3]'>HEADPHONES</p>
-                        <p className='flex items-center mb-[22px] button-3 z-[3]'>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
+                        <p className='flex items-center mb-[22px] button-3 z-[3] hover:text-D87D4A' onClick={() => transferToPage('headphones')}>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
                     </div>
                 </div>
                 <div className='relative w-[33%] xs:w-full h-[217px] mx-[10px] xs:mx-0 xs:mb-[16px]'>
@@ -47,7 +52,7 @@ export default function Navigation() {
                     </div>
                     <div className='h-[165px] w-full bg-F1F1F1 absolute bottom-0 rounded-[8px] flex justify-end items-center flex-col'>
                         <p className='nav-title mb-[17px] cursor-pointer z-[3]'>SPEAKERS</p>
-                        <p className='flex items-center mb-[22px] button-3 z-[3]'>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
+                        <p className='flex items-center mb-[22px] button-3 z-[3] hover:text-D87D4A'>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
                     </div>
                 </div>
                 <div className='relative w-[33%] xs:w-full h-[217px] m-auto'>
@@ -56,7 +61,7 @@ export default function Navigation() {
                     </div>
                     <div className='h-[165px] w-full bg-F1F1F1 absolute bottom-0 rounded-[8px] flex justify-end items-center flex-col'>
                         <p className='nav-title mb-[17px] cursor-pointer z-[3]'>EARPHONES</p>
-                        <p className='flex items-center mb-[22px] button-3 z-[3]'>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
+                        <p className='flex items-center mb-[22px] button-3 z-[3] hover:text-D87D4A'>SHOP <img src={arrow} alt='arrow' className='ml-[13px]'/></p>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='' element={<Home/>}/>
-        <Route path='/headphone' element={<Headphones/>}/>
+        <Route path='/headphones' element={<Headphones/>}/>
       </Routes>
       <Footer/>
     </div>
