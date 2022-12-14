@@ -1,44 +1,44 @@
 // Pass css to element on Home.tsx file using @apply
 #shop {
-    @apply flex;
-    @apply justify-center;
-    @apply mt-[120px] md:mt-[96px] xs:mt-[40px];
+  @apply flex;
+  @apply justify-center;
+  @apply mt-[120px] md:mt-[96px] xs:mt-[40px];
 
-    .cards-container {
-        @apply flex items-end;
-        @apply flex-row xs:flex-col;
-        @apply w-[70%] xl:w-[80%] lg:w-[90%];
+  .cards-container {
+    @apply flex items-end;
+    @apply flex-row xs:flex-col;
+    @apply w-[70%] xl:w-[80%] lg:w-[90%];
 
-        .card {
-            @apply relative;
-            @apply flex flex-col items-center;
-            @apply w-[30%] xl:w-[31.5%] lg:w-[33%] xs:w-full;
-            @apply h-[284px] lg:h-[217px];
+    .card {
+      @apply relative;
+      @apply flex flex-col items-center;
+      @apply w-[30%] xl:w-[31.5%] lg:w-[33%] xs:w-full;
+      @apply h-[284px] lg:h-[217px];
 
-            img {
-                @apply relative z-[2] cursor-pointer;
-                @apply xs:mt-[10px];
-                @apply w-[60%] xs:w-[40%] sm:w-[90%] md:w-[60%] lg:w-[50%] xl:w-[80%];
-            }
+      img {
+        @apply relative z-[2] cursor-pointer;
+        @apply xs:mt-[10px];
+        @apply w-[60%] xl:w-[80%] lg:w-[50%] md:w-[60%] sm:w-[90%] xs:w-[40%];
+      }
 
-            div {
-                @apply bg-F1F1F1 rounded-[8px] absolute bottom-0 cursor-pointer;
-                @apply flex justify-end items-center flex-col;
-                @apply w-full;
-                @apply h-[204px] lg:h-[165px];
-                
-                .nav-title {
-                    @apply mb-[17px] z-[3];
-                }
-                p:not(.nav-title) {
-                    @apply flex items-center mb-[22px] z-[3];
-                }
-            }
+      div {
+        @apply absolute bottom-0 cursor-pointer rounded-[8px] bg-F1F1F1;
+        @apply flex flex-col items-center justify-end;
+        @apply w-full;
+        @apply h-[204px] lg:h-[165px];
+
+        .nav-title {
+          @apply z-[3] mb-[17px];
         }
-        .card:hover {
-            .button-3 {
-                @apply text-D87D4A;
-            }
+        p:not(.nav-title) {
+          @apply z-[3] mb-[22px] flex items-center;
         }
+      }
     }
+    .card:hover {
+      .button-3 {
+        @apply text-D87D4A;
+      }
+    }
+  }
 }

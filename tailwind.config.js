@@ -16,13 +16,25 @@ module.exports = {
       '979797': '#979797'
     },
     screens: {
-      'xl': {'max': '1400px'},
-      'lg': {'max': '1200px'},
-      'md': {'max': '1024px'},
-      'sm': {'max': '768px'},
-      'xs': {'max': '480px'},
+      'xl': {
+        'max': '1400px'
+      },
+      'lg': {
+        'max': '1200px'
+      },
+      'md': {
+        'max': '1024px'
+      },
+      'sm': {
+        'max': '768px'
+      },
+      'xs': {
+        'max': '480px'
+      },
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    "prettier-plugin-tailwindcss"
+  ],
 }

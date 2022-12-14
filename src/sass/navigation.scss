@@ -1,23 +1,23 @@
 .nav-title {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
 }
 .up {
-    display: none !important;
+  display: none !important;
 }
 .down {
-    animation: roll .5s ease-in-out;
+  animation: roll 0.5s ease-in-out;
 }
 @keyframes roll {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

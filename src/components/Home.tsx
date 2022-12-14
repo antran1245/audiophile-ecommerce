@@ -10,11 +10,11 @@ export default function Home() {
         Top heading -> headphone black background with switching image based on size of screen
         Text will place onto the background image using absolute position
       */}
-      <section className="flex justify-center bg-[#191919] relative">
+      <section className="relative flex justify-center bg-[#191919]">
         <div className="relative flex w-[70%] items-center md:w-[100%] md:justify-center">
-          <div className="absolute z-[2] w-[40%] xl:w-[50%] md:text-center sm:w-[60%] xs:w-[80%] xl:mt-[8vw]">
+          <div className="absolute z-[2] w-[40%] xl:mt-[8vw] xl:w-[50%] md:text-center sm:w-[60%] xs:w-[80%]">
             <p className="overline-text text-FFFFFF/50">NEW PRODUCT</p>
-            <p className="heading1 mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px] xsm:mt-[10px] s:mt-[24px]">
+            <p className="heading1 xsm:mt-[10px] s:mt-[24px] mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
               XX99 Mark II Headphones
             </p>
             <p className="body mt-[24px] text-FFFFFF/75 lg:mt-[10px] md:mt-[24px] sm:mt-[10px] xs:mt-[24px]">
@@ -28,12 +28,12 @@ export default function Home() {
           <img
             src={require("../assets/home/desktop/image-hero.jpg")}
             alt="headphone"
-            className="ml-[100px] md:hidden lg:mt-[100px]"
+            className="ml-[100px] lg:mt-[100px] md:hidden"
           />
           <img
             src={require("../assets/home/tablet/image-header.jpg")}
             alt="headphone"
-            className="hidden md:block xs:hidden sm:mt-[50px] xs:mt-0"
+            className="hidden md:block sm:mt-[50px] xs:mt-0 xs:hidden"
           />
           <img
             src={require("../assets/home/mobile/image-header.jpg")}
@@ -43,23 +43,23 @@ export default function Home() {
         </div>
       </section>
       {/* shop options for headphone, speaker, earphone */}
-      <ShopOptions/>
+      <ShopOptions />
       {/* 
         ZX9 Speaker Box
       */}
-      <section className="relative flex justify-center overflow-hidden mt-[168px] md:mt-[96px] xs:mt-[120px]">
+      <section className="relative mt-[168px] flex justify-center overflow-hidden md:mt-[96px] xs:mt-[120px]">
         {/* Ring behind the speaker */}
         <img
           src={circles}
           alt="circles"
-          className="lg:block hidden absolute z-[1] bottom-0 xl:w-[100%] lg:top-[-30%] md:top-[-25%] sm:top-[-15%] xs:top-[-10%]"
+          className="absolute bottom-0 z-[1] hidden xl:w-[100%] lg:top-[-30%] lg:block md:top-[-25%] sm:top-[-15%] xs:top-[-10%]"
         />
-        <div className="relative flex w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">         
+        <div className="relative flex w-[70%] justify-evenly overflow-hidden rounded-[8px] bg-D87D4A pt-[96px] pb-0 xl:w-[80%] lg:w-[90%] lg:flex-col lg:items-center xs:py-[55px]">
           <img
             src={circles}
             alt="circles"
-            className="absolute z-[1] fit-content left-[-5%] top-0 lg:hidden block"
-            />
+            className="fit-content absolute left-[-5%] top-0 z-[1] block lg:hidden"
+          />
           {/* Speaker image depending on the size of screen (desktop, tablet, mobile) */}
           <img
             src={require("../assets/home/desktop/image-speaker-zx9.png")}
@@ -76,7 +76,7 @@ export default function Home() {
             alt="speaker zx9"
             className="relative z-[1] hidden w-[40%] max-w-[410px] xs:block "
           />
-          <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center xs:mb-[0] sm:w-[70%]">
+          <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center sm:w-[70%] xs:mb-[0]">
             <p className="heading1 mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
               ZX9 SPEAKER
             </p>
@@ -92,7 +92,7 @@ export default function Home() {
         ZX7 Speaker Box
       */}
       <section id="speaker-short" className="flex justify-center">
-        <div className="w-[70%] xl:w-[80%] lg:w-[90%] py-[101px] px-[95px] md:px-[62px] xs:px-[24px]">
+        <div className="w-[70%] py-[101px] px-[95px] xl:w-[80%] lg:w-[90%] md:px-[62px] xs:px-[24px]">
           <p className="heading4">ZX7 SPEAKER</p>
           <button className="button-2 md:mt-[32px]">SEE PRODUCT</button>
         </div>
@@ -101,17 +101,23 @@ export default function Home() {
         YX1 Earphones
       */}
       <section className="mt-[48px] flex justify-center">
-        <div className="w-[70%] xl:w-[80%] lg:w-[90%] flex items-center justify-between xs:flex-col">
-          <picture className="w-[49%] h-[100%] xs:w-[100%]">
-            <source media="(max-width: 1024px) and (min-width: 480px)" srcSet={require('../assets/home/tablet/image-earphones-yx1.jpg')}/>
-            <source media="(max-width: 480px) " srcSet={require('../assets/home/mobile/image-earphones-yx1.jpg')}/>
+        <div className="flex w-[70%] items-center justify-between xl:w-[80%] lg:w-[90%] xs:flex-col">
+          <picture className="h-[100%] w-[49%] xs:w-[100%]">
+            <source
+              media="(max-width: 1024px) and (min-width: 480px)"
+              srcSet={require("../assets/home/tablet/image-earphones-yx1.jpg")}
+            />
+            <source
+              media="(max-width: 480px) "
+              srcSet={require("../assets/home/mobile/image-earphones-yx1.jpg")}
+            />
             <img
-            src={require('../assets/home/desktop/image-earphones-yx1.jpg')}
-            alt="earphone"
-            className="w-[100%] xs:w-[100%] h-[100%] rounded-[8px]"
+              src={require("../assets/home/desktop/image-earphones-yx1.jpg")}
+              alt="earphone"
+              className="h-[100%] w-[100%] rounded-[8px] xs:w-[100%]"
             />
           </picture>
-          <div className="w-[49%] xs:w-[100%] h-[100%] xs:h-auto bg-F1F1F1 rounded-[8px] py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:py-[41px] xs:pl-[24px] xs:pr-[56px] xs:mt-[24px]">
+          <div className="h-[100%] w-[49%] rounded-[8px] bg-F1F1F1 py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:mt-[24px] xs:h-auto xs:w-[100%] xs:py-[41px] xs:pl-[24px] xs:pr-[56px]">
             <p className="heading4">YX1 EARPHONES</p>
             <button className="button-2 mt-[32px]">SEE PRODUCT</button>
           </div>
@@ -120,7 +126,7 @@ export default function Home() {
       {/*
         Bringing you the best audio gear
       */}
-      <BestAudio/>
+      <BestAudio />
     </main>
   );
 }
