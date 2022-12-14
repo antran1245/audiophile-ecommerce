@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/shared/desktop/logo.svg'
 import cart from '../../assets/shared/desktop/icon-cart.svg'
 import hamburger from '../../assets/shared/tablet/icon-hamburger.svg'
@@ -21,8 +22,8 @@ export default function Navigation() {
                 </div>
                 <img src={logo} alt='logo' className='hidden xs:block cursor-pointer'/>
                 <div className='block md:hidden'>
-                    <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HOME</a>
-                    <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</a>
+                    <Link to=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HOME</Link>
+                    <Link to='/headphone' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>HEADPHONES</Link>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A mr-[34px]'>SPEAKERS</a>
                     <a href=' ' className='subtitle text-FFFFFF hover:text-D87D4A'>EARPHONES</a>
                 </div>
