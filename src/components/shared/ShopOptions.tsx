@@ -4,14 +4,22 @@ import headphones from "../../assets/shared/desktop/image-category-thumbnail-hea
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 import arrow from "../../assets/shared/desktop/icon-arrow-right.svg";
 import "../../sass/shopoptions.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function ShopOptions() {
+  const navigate = useNavigate();
+
+  const transferToPage = (page: string) => {
+    window.scrollTo({ behavior: "smooth", top: -100 });
+    navigate("/Category/" + page);
+  };
+
   return (
     // Shop options
     // Pass Tailwind CSS classes from sass file, home.scss, to elements.
     <section id="shop">
       <div className={`cards-container`}>
-        <div className="card">
+        <div className="card" onClick={() => transferToPage("headphones")}>
           <img src={headphones} alt="headphones" />
           <div>
             <p className="nav-title">HEADPHONES</p>
@@ -20,7 +28,7 @@ export default function ShopOptions() {
             </p>
           </div>
         </div>
-        <div className="card m-auto">
+        <div className="card m-auto" onClick={() => transferToPage("speakers")}>
           <img src={speakers} alt="speakers" />
           <div>
             <p className="nav-title">SPEAKERS</p>
@@ -29,7 +37,7 @@ export default function ShopOptions() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card" onClick={() => transferToPage("earphones")}>
           <img src={earphones} alt="earphones" />
           <div>
             <p className="nav-title">EARPHONES</p>

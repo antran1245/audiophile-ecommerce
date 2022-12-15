@@ -39,12 +39,12 @@ export default function Category() {
         return (
           <div
             key={index}
-            className="mx-auto my-[160px] flex w-[70%] xl:w-[80%] lg:w-[90%]"
+            className="mx-auto my-[160px] flex w-[70%] xl:w-[80%] lg:w-[90%] md:my-[120px] md:flex-col"
           >
             <picture
               className={`${
                 index % 2 !== 0 ? "order-2 flex justify-end" : "order-1"
-              }`}
+              } md:order-1`}
             >
               <source
                 media="(max-width: 1024px) and (min-width: 480px)"
@@ -75,19 +75,23 @@ export default function Category() {
                   item.categoryImage.desktop.length
                 )}`)}
                 alt="new headphone"
-                className="w-[80%]"
+                className="h-[100%] w-[80%] md:w-[100%]"
               />
             </picture>
             <div
               className={`my-auto w-[100%] ${
                 index % 2 !== 0 ? "order-1" : "order-2"
-              }`}
+              } md:order-2 md:mx-auto md:mt-[52px] md:flex md:w-[50%] md:flex-col md:items-center md:text-center sm:mt-[42px] sm:w-[75%] xs:mt-[32px] xs:w-[100%]`}
             >
               {item.new ? (
-                <p className="overline-text text-D87D4A">NEW PRODUCT</p>
+                <p className="overline-text mb-[16px] text-D87D4A">
+                  NEW PRODUCT
+                </p>
               ) : null}
               <p className="heading2 uppercase">{item.name}</p>
-              <p className="body text-000000/50">{item.description}</p>
+              <p className="body mt-[32px] mb-[40px] text-000000/50">
+                {item.description}
+              </p>
               <button className="button-1">SEE PRODUCT</button>
             </div>
           </div>

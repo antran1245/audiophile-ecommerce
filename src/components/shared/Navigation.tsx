@@ -48,15 +48,18 @@ export default function Navigation() {
           >
             HEADPHONES
           </Link>
-          <a
-            href=" "
+          <Link
+            to="/Category/speakers"
             className="subtitle mr-[34px] text-FFFFFF hover:text-D87D4A"
           >
             SPEAKERS
-          </a>
-          <a href=" " className="subtitle text-FFFFFF hover:text-D87D4A">
+          </Link>
+          <Link
+            to="/Category/earphones"
+            className="subtitle text-FFFFFF hover:text-D87D4A"
+          >
             EARPHONES
-          </a>
+          </Link>
         </div>
         <img src={cart} alt="cart" className="object-contain" />
       </nav>
@@ -93,7 +96,10 @@ export default function Navigation() {
           </div>
           <div className="absolute bottom-0 flex h-[165px] w-full flex-col items-center justify-end rounded-[8px] bg-F1F1F1">
             <p className="nav-title z-[3] mb-[17px] cursor-pointer">SPEAKERS</p>
-            <p className="button-3 z-[3] mb-[22px] flex items-center hover:text-D87D4A">
+            <p
+              className="button-3 z-[3] mb-[22px] flex items-center hover:text-D87D4A"
+              onClick={() => transferToPage("speakers")}
+            >
               SHOP <img src={arrow} alt="arrow" className="ml-[13px]" />
             </p>
           </div>
@@ -110,7 +116,10 @@ export default function Navigation() {
             <p className="nav-title z-[3] mb-[17px] cursor-pointer">
               EARPHONES
             </p>
-            <p className="button-3 z-[3] mb-[22px] flex items-center hover:text-D87D4A">
+            <p
+              className="button-3 z-[3] mb-[22px] flex items-center hover:text-D87D4A"
+              onClick={() => transferToPage("earphones")}
+            >
               SHOP <img src={arrow} alt="arrow" className="ml-[13px]" />
             </p>
           </div>
