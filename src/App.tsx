@@ -6,6 +6,7 @@ import Category from "./components/Category";
 import Footer from "./components/shared/Footer";
 import "./App.css";
 import DataContext from "./components/context/DataContext";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <div className="relative">
           <Navigation />
           <Routes>
-            <Route path="" element={<Home />} />
-            <Route path="/Category/:type" element={<Category />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/Category/:type/" element={<Category />} />
+            <Route path="/Category/:type/detail/:id" element={<Detail />} />
           </Routes>
           <Footer />
         </div>

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "./context/DataContext";
 import { DataInterface } from "../interfaces/DataInterface";
 import BestAudio from "./shared/BestAudio";
@@ -35,7 +35,7 @@ export default function Category() {
       <p className="heading2 bg-101010 pt-[195px] pb-[97px] text-center uppercase text-FFFFFF">
         {typeOfCategory}
       </p>
-      {products.map((item, index) => {
+      {products.map((item: any, index: number) => {
         return (
           <div
             key={index}
@@ -74,8 +74,8 @@ export default function Category() {
                   ),
                   item.categoryImage.desktop.length
                 )}`)}
-                alt="new headphone"
-                className="h-[100%] w-[80%] md:w-[100%]"
+                alt={item.slug}
+                className="h-[100%] w-[80%] rounded-[8px] md:w-[100%]"
               />
             </picture>
             <div
@@ -92,7 +92,12 @@ export default function Category() {
               <p className="body mt-[32px] mb-[40px] text-000000/50">
                 {item.description}
               </p>
-              <button className="button-1">SEE PRODUCT</button>
+              <Link
+                to={`/Category/${item.category}/detail/${item.id}`}
+                state={{ data: item }}
+              >
+                <button className="button-1">SEE PRODUCT</button>
+              </Link>
             </div>
           </div>
         );
