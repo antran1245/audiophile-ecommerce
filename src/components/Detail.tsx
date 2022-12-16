@@ -14,8 +14,8 @@ export default function Detail() {
   return (
     <main className="bg-000000 pt-[97px]">
       <div className="bg-FFFFFF">
-        <p className="mx-auto w-[70%] pb-[56px] pt-[79px] text-000000/50 xl:w-[80%] lg:w-[90%]">
-          <span className="cursor-pointer ">Go Back</span>
+        <p className="mx-auto w-[70%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
+          <span className="cursor-pointer text-000000/50">Go Back</span>
         </p>
         {/* Product detail and image */}
         <Products {...state.data} />
@@ -24,7 +24,9 @@ export default function Detail() {
         {/* Gallery images */}
         <Gallery {...state.data} />
         {/* You  Many Also Like */}
-
+        {/* <section className="mx-auto w-[70%] xl:w-[80%] lg:w-[90%]">
+          <p className="heading3">YOU MAY ALSO LIKE</p>
+        </section> */}
         <ShopOptions />
         <BestAudio />
       </div>

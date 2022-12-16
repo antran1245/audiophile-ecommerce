@@ -2,8 +2,8 @@ import { ProductInterface } from "../../interfaces/ProductInterface";
 
 export default function Gallery(props: ProductInterface) {
   return (
-    <div className="mx-auto mt-[160px] flex h-[100%] w-[70%] justify-evenly xl:w-[80%] lg:w-[90%] sm:flex-col">
-      <div className="flex h-[full] flex-col justify-between pr-[30px] sm:pr-0">
+    <section className="mx-auto mt-[160px] flex w-[70%] justify-center xl:w-[80%] lg:w-[90%] sm:flex-col">
+      <div className="flex  flex-col justify-between pr-[30px] sm:pr-0">
         {/* First image */}
         <picture>
           <source
@@ -104,6 +104,6 @@ export default function Gallery(props: ProductInterface) {
           alt={"third"}
         />
       </picture>
-    </div>
+    </section>
   );
 }

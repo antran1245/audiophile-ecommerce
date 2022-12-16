@@ -3,7 +3,7 @@ import { ProductInterface } from "../../interfaces/ProductInterface";
 
 export default function Features(props: ProductInterface) {
   return (
-    <div className="mx-auto flex w-[70%] justify-between xl:w-[80%] lg:w-[90%] md:flex-col">
+    <section className="mx-auto flex w-[70%] justify-between xl:w-[80%] lg:w-[90%] md:flex-col">
       <div className="w-[50%] md:w-[100%]">
         <p className="heading3 mb-[32px]">FEATURES</p>
         {/* Split the features text into part by \n */}
@@ -31,6 +31,6 @@ export default function Features(props: ProductInterface) {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
