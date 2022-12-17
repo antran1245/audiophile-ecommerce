@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AlsoLike from "./DetailComponents/AlsoLike";
 import Features from "./DetailComponents/Features";
 import Gallery from "./DetailComponents/Gallery";
@@ -9,14 +9,21 @@ import ShopOptions from "./shared/ShopOptions";
 
 export default function Detail() {
   const { state } = useLocation();
-  // useEffect(() => {
-  //   window.scrollTo({ behavior: "smooth", top: -100 });
-  // }, []);
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: -100 });
+  }, []);
+
   return (
     <main className="bg-000000 pt-[94.5px] sm:pt-[90px]">
       <div className="bg-FFFFFF">
         <p className="mx-auto w-[70%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
-          <span className="cursor-pointer text-000000/50">Go Back</span>
+          <span
+            className="cursor-pointer text-000000/50"
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+          </span>
         </p>
         {/* Product detail and image */}
         <Products {...state.data} />
