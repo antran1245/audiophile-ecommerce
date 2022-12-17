@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Context } from "./context/DataContext";
 import { DataInterface } from "../interfaces/DataInterface";
 import BestAudio from "./shared/BestAudio";
 import ShopOptions from "./shared/ShopOptions";
+import ShopContext from "./context/ShopContext";
 
 export default function Category() {
   // Pass information
-  const dataContext = useContext(Context);
+  const dataContext = useContext(ShopContext).data;
   const params = useParams();
 
   // Setting the types of products

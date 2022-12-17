@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProductInterface } from "../../interfaces/ProductInterface";
-import { Context } from "../context/DataContext";
+import ShopContext from "../context/ShopContext";
 
 export default function AlsoLike(props: ProductInterface) {
   const navigate = useNavigate();
-  const dataContext = useContext(Context);
+  const dataContext = useContext(ShopContext).data;
 
   const anotherProduct = (slug: string) => {
     const data = dataContext.filter((item) => item.slug === slug);

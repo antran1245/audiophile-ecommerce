@@ -1,13 +1,35 @@
-import React, { createContext, ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useReducer } from "react";
 import file from "../../data/data.json";
-import { DataInterface } from "../../interfaces/DataInterface";
+import ShopContext from "./ShopContext";
+import { ProductInterface } from "../../interfaces/ProductInterface";
+import { CartReducer, ProductKind } from "./CartReducer";
 
-export const Context = createContext<DataInterface>([]);
-
+const initialState = {
+  cart: [],
+};
 export default function DataContext({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<DataInterface>([]);
-  useEffect(() => {
-    setData(file);
-  }, []);
-  return <Context.Provider value={data}>{children}</Context.Provider>;
+  const [cartState, dispatch] = useReducer(CartReducer, initialState);
+
+  const addToCart = (product: ProductInterface) => {
+    setTimeout(() => {
+      dispatch({ type: ProductKind.ADD_PRODUCT, product: product });
+    }, 700);
+  };
+  const removeFromCart = (productID: number) => {
+    setTimeout(() => {
+      dispatch({ type: ProductKind.REMOVE_PRODUCT, productID: productID });
+    }, 700);
+  };
+  return (
+    <ShopContext.Provider
+      value={{
+        data: file,
+        cart: cartState.cart,
+        addToCart: addToCart,
+        removeFromCart: removeFromCart,
+      }}
+    >
+      {children}
+    </ShopContext.Provider>
+  );
 }

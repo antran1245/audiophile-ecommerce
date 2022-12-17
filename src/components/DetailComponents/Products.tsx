@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductInterface } from "../../interfaces/ProductInterface";
 
 export default function Products(props: ProductInterface) {
+  const [count, setCount] = useState<number>(1);
+
   return (
     <section className="mx-auto mb-[160px] flex w-[70%] xl:w-[80%] lg:w-[90%] md:mb-[120px] xs:flex-col">
       {/* images in picture tag for responsive image */}
@@ -60,17 +62,26 @@ export default function Products(props: ProductInterface) {
         <div className="flex">
           {/* Amount selection of the product to be bought */}
           <div className="mr-[16px] flex w-fit items-center bg-F1F1F1 text-[13px] font-[700] leading-[18px] ">
-            <span className="cursor-pointer py-[15px] px-[15px] hover:text-D87D4A">
+            <button
+              className={`py-[15px] px-[15px] ${
+                count <= 1 ? "text-000000/50" : "hover:text-D87D4A"
+              }`}
+              onClick={() => setCount(count - 1)}
+              disabled={count <= 1 ? true : false}
+            >
               &#8722;
-            </span>
+            </button>
             <p className="cursor-pointer py-[15px] px-[21px] tracking-[1px]">
-              1
+              {count}
             </p>
-            <span className="cursor-pointer py-[15px] px-[15px] hover:text-D87D4A">
+            <button
+              className="py-[15px] px-[15px] hover:text-D87D4A"
+              onClick={() => setCount(count + 1)}
+            >
               &#43;
-            </span>
+            </button>
           </div>
-          <button className="button-1">SEE PRODUCT</button>
+          <button className="button-1">ADD TO CART</button>
         </div>
       </div>
     </section>
