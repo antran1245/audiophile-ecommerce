@@ -3,7 +3,7 @@ import { ProductInterface } from "../../interfaces/ProductInterface";
 
 export default function Features(props: ProductInterface) {
   return (
-    <section className="mx-auto flex w-[70%] justify-between xl:w-[80%] lg:w-[90%] md:flex-col">
+    <section className="mx-auto my-[160px] mt-[120px] mb-[153px] flex w-[70%] justify-between xl:w-[80%] lg:w-[90%] md:flex-col sm:my-[88px]">
       <div className="w-[50%] md:w-[100%]">
         <p className="heading3 mb-[32px]">FEATURES</p>
         {/* Split the features text into part by \n */}
@@ -18,9 +18,9 @@ export default function Features(props: ProductInterface) {
         })}
       </div>
       {/* In the Box. Map the includes part of the json */}
-      <div className="w-[40%] md:mt-[120px] md:flex md:w-[100%] md:justify-between sm:flex-col">
+      <div className="w-[40%] md:mt-[120px] md:flex md:w-[100%] md:justify-between sm:mt-[113px] sm:flex-col">
         <p className="heading3 mb-[32px]">IN THE BOX</p>
-        <div className="md:w-[50%]">
+        <div className="md:w-[50%] sm:w-[100%]">
           {props.includes.map((item: any, index: number) => {
             return (
               <p key={index} className="body mb-[8px] text-000000/50">

@@ -11,7 +11,7 @@ export default function Products(props: ProductInterface) {
           srcSet={require(`../../assets${props.image.tablet.substring(
             props.image.tablet.indexOf(
               "/",
-              props.image.tablet.indexOf("/") + 1
+              props.image.tablet.indexOf("/") + 2
             ),
             props.image.tablet.length
           )}`)}
@@ -21,7 +21,7 @@ export default function Products(props: ProductInterface) {
           srcSet={require(`../../assets${props.image.mobile.substring(
             props.image.mobile.indexOf(
               "/",
-              props.image.mobile.indexOf("/") + 1
+              props.image.mobile.indexOf("/") + 2
             ),
             props.image.mobile.length
           )}`)}
@@ -30,7 +30,7 @@ export default function Products(props: ProductInterface) {
           src={require(`../../assets${props.image.desktop.substring(
             props.image.desktop.indexOf(
               "/",
-              props.image.desktop.indexOf("/") + 1
+              props.image.desktop.indexOf("/") + 2
             ),
             props.image.desktop.length
           )}`)}
