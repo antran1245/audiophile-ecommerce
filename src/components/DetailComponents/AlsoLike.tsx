@@ -1,6 +1,20 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProductInterface } from "../../interfaces/ProductInterface";
+import { Context } from "../context/DataContext";
 
 export default function AlsoLike(props: ProductInterface) {
+  const navigate = useNavigate();
+  const dataContext = useContext(Context);
+
+  const anotherProduct = (slug: string) => {
+    const data = dataContext.filter((item) => item.slug === slug);
+    navigate(`/Category/${data[0].category}/detail/${data[0].id}`, {
+      state: { data: data[0] },
+    });
+    window.scrollTo({ behavior: "smooth", top: -100 });
+  };
+
   return (
     <section className="mx-auto my-[160px] w-[70%] xl:w-[80%] lg:w-[90%] md:my-[120px]">
       <p className="heading3 text-center">YOU MAY ALSO LIKE</p>
@@ -49,7 +63,12 @@ export default function AlsoLike(props: ProductInterface) {
               <p className="heading5 mt-[40px] mb-[32px] uppercase">
                 {item.name}
               </p>
-              <button className="button-1">SEE PRODUCT</button>
+              <button
+                className="button-1"
+                onClick={() => anotherProduct(item.slug)}
+              >
+                SEE PRODUCT
+              </button>
             </div>
           );
         })}
