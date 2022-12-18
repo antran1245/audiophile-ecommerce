@@ -107,6 +107,16 @@
 .button-3:hover {
   color: rgba(theme("colors.D87D4A"), 0.5);
 }
+.button-4 {
+  background-color: transparent;
+  border: 1px solid theme("colors.000000");
+  padding: 15px 30px;
+}
+.button-4:hover {
+  background-color: theme("colors.000000");
+  border: 1px solid theme("colors.000000");
+  color: theme("colors.FFFFFF");
+}
 
 /* Form styles */
 .form-group {
