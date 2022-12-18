@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 import cart from "../../assets/shared/desktop/icon-cart.svg";
@@ -9,7 +9,12 @@ import speakers from "../../assets/shared/desktop/image-category-thumbnail-speak
 import arrow from "../../assets/shared/desktop/icon-arrow-right.svg";
 import "../../sass/navigation.scss";
 
-export default function Navigation() {
+interface NavigationProps {
+  openCart: boolean;
+  setOpenCart: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Navigation({ openCart, setOpenCart }: NavigationProps) {
   const [show, setShow] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -21,6 +26,9 @@ export default function Navigation() {
     <div id="container" className="absolute top-0 left-0 z-[4] w-full">
       {/* Default web nav */}
       <nav className="m-auto flex w-[70%] justify-between border-b-[1px] border-FFFFFF/20 pt-[32px] pb-[36px] md:w-[100%] md:justify-between md:px-[40px] sm:pb-[32px] xs:rounded-b-[8px] xs:border-b-0 xs:px-[24px]">
+        {/* 
+          Logo switch between between within div and outside depending on screen size. Only mobile the logo be outside.
+        */}
         <div className="flex items-center">
           <img
             src={hamburger}
@@ -35,6 +43,10 @@ export default function Navigation() {
           />
         </div>
         <img src={logo} alt="logo" className="hidden cursor-pointer xs:block" />
+
+        {/* 
+          Dynamic Links to the Category.tsx page
+        */}
         <div className="block md:hidden">
           <Link
             to=" "
@@ -61,8 +73,14 @@ export default function Navigation() {
             EARPHONES
           </Link>
         </div>
-        <img src={cart} alt="cart" className="object-contain" />
+        <img
+          src={cart}
+          alt="cart"
+          className="cursor-pointer object-contain"
+          onClick={() => setOpenCart(!openCart)}
+        />
       </nav>
+
       {/* Tablet/Mobile nav */}
       {/* White scroll down box letting people to navigate to different box */}
       <div
