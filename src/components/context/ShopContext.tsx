@@ -5,6 +5,6 @@ import file from "../../data/data.json";
 export default React.createContext({
   data: file,
   cart: [],
-  addToCart: (product: ProductInterface) => {},
-  removeFromCart: (productID: number) => {},
+  addToCart: (product: ProductInterface, quantity: number) => {},
+  removeFromCart: (productID: number, quantity: number) => {},
 });

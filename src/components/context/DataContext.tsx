@@ -1,4 +1,4 @@
-import React, { ReactNode, useReducer } from "react";
+import React, { ReactNode, useEffect, useReducer } from "react";
 import file from "../../data/data.json";
 import ShopContext from "./ShopContext";
 import { ProductInterface } from "../../interfaces/ProductInterface";
@@ -10,23 +10,41 @@ const initialState = {
 export default function DataContext({ children }: { children: ReactNode }) {
   const [cartState, dispatch] = useReducer(CartReducer, initialState);
 
-  const addToCart = (product: ProductInterface) => {
+  useEffect(() => {
+    console.log(cartState.cart);
+  }, [cartState.cart]);
+
+  // adding # amount of the selected product (a json array object) to the cart
+  const addToCart = (product: ProductInterface, quantity: number) => {
     setTimeout(() => {
-      dispatch({ type: ProductKind.ADD_PRODUCT, product: product });
+      // Interact with CartReducer.tsx ProductAction interface
+      dispatch({
+        type: ProductKind.ADD_PRODUCT,
+        product: product,
+        quantity: quantity,
+      });
     }, 700);
   };
-  const removeFromCart = (productID: number) => {
+
+  // removing # or all the selected product (a json array object) from the cart
+  const removeFromCart = (productID: number, quantity: number) => {
     setTimeout(() => {
-      dispatch({ type: ProductKind.REMOVE_PRODUCT, productID: productID });
+      // Interact with CartReducer.tsx ProductAction interface
+      dispatch({
+        type: ProductKind.REMOVE_PRODUCT,
+        productID: productID,
+        quantity: quantity,
+      });
     }, 700);
   };
   return (
+    // pass the value to other components for access
     <ShopContext.Provider
       value={{
-        data: file,
-        cart: cartState.cart,
-        addToCart: addToCart,
-        removeFromCart: removeFromCart,
+        data: file, // json file
+        cart: cartState.cart, //the initial cart to be updated
+        addToCart: addToCart, //reference with the function above.
+        removeFromCart: removeFromCart, //reference with the function above.
       }}
     >
       {children}

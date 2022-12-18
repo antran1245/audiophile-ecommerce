@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ProductInterface } from "../../interfaces/ProductInterface";
+import ShopContext from "../context/ShopContext";
 
 export default function Products(props: ProductInterface) {
   const [count, setCount] = useState<number>(1);
+  const context = useContext(ShopContext);
+  const { addToCart } = context;
 
   return (
     <section className="mx-auto mb-[160px] flex w-[70%] xl:w-[80%] lg:w-[90%] md:mb-[120px] xs:flex-col">
@@ -81,7 +84,9 @@ export default function Products(props: ProductInterface) {
               &#43;
             </button>
           </div>
-          <button className="button-1">ADD TO CART</button>
+          <button className="button-1" onClick={() => addToCart(props, count)}>
+            ADD TO CART
+          </button>
         </div>
       </div>
     </section>
