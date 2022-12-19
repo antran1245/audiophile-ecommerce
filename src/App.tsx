@@ -8,6 +8,7 @@ import "./App.css";
 import DataContext from "./components/context/DataContext";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [openCart, setOpenCart] = useState<boolean>(false);
@@ -21,6 +22,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Category/:type/" element={<Category />} />
             <Route path="/Category/:type/detail/:id" element={<Detail />} />
+            <Route
+              path="/checkout"
+              element={<Checkout setOpenCart={setOpenCart} />}
+            />
           </Routes>
           <Footer />
         </div>

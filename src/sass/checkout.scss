@@ -1,0 +1,62 @@
+/* Form styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: -0.21px;
+    margin-bottom: 9px;
+  }
+  input[type='text']:focus-visible {
+    outline: none;
+    border: 1px solid theme("colors.D87D4A");
+  }
+  .form-group input[type="text"] {
+    color: theme("colors.000000");
+    caret-color: theme("colors.D87D4A");
+  }
+}
+.form-group-radio {
+  margin-bottom: 16px;
+  input[type="radio"] {
+    // accent-color: theme("colors.D87D4A");
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid theme('colors.CFCFCF');
+    border-radius: 50%;
+  }
+  input[type="radio"]:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 4px auto;
+    border-radius: 50%;
+  }
+  input[type="radio"]:checked:before {
+    background-color: theme("colors.D87D4A");
+  }
+}
+
+// Share classes between text group and radio group
+.form-group input, .form-group-radio{
+    border: 1px solid theme("colors.CFCFCF");
+    border-radius: 8px;
+    padding-top: 18px;
+    padding-bottom: 19px;
+    padding-left: 24px;
+  }
+.form-group-radio:hover,
+input:active,
+input[type="radio"]:hover {
+  border: 1px solid theme("colors.D87D4A");
+}
+.form-group .form-label.error {
+  color: theme("colors.CD2C2C");
+}
+input[type="text"].error {
+  border: 1px solid theme("colors.CD2C2C");
+}

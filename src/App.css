@@ -118,40 +118,6 @@
   color: theme("colors.FFFFFF");
 }
 
-/* Form styles */
-.form-group {
-  display: flex;
-}
-.form-group .form-label {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: -0.21px;
-}
-input {
-  border: 1px solid theme("colors.CFCFCF");
-}
-input:active,
-input[type="radio"]:hover {
-  border: 1px solid theme("colors.D87D4A");
-}
-.form-group input[type="text"] {
-  padding-top: 18px;
-  padding-bottom: 19px;
-  padding-left: 24px;
-  color: theme("colors.000000");
-  caret-color: theme("colors.D87D4A");
-}
-.form-group .form-label {
-  color: theme("colors.CD2C2C");
-}
-input[type="text"].error {
-  border: 1px solid theme("colors.CD2C2C");
-}
-input[type="checkbox"] {
-  accent-color: theme("colors.D87D4A");
-}
-
 /* icons, facebook, twitter, instagram */
 .icon:hover {
   filter: invert(50%) sepia(65%) saturate(416%) hue-rotate(338deg)
