@@ -4,11 +4,11 @@ import Navigation from "./components/shared/Navigation";
 import Home from "./components/Home";
 import Category from "./components/Category";
 import Footer from "./components/shared/Footer";
-import "./App.css";
 import DataContext from "./components/context/DataContext";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import "./App.css";
 
 function App() {
   const [openCart, setOpenCart] = useState<boolean>(false);
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <div className="relative">
           <Navigation openCart={openCart} setOpenCart={setOpenCart} />
-          {openCart ? <Cart /> : null}
+          {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Category/:type/" element={<Category />} />

@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { CheckoutProps } from "../interfaces/CheckoutInterface";
 import "../sass/checkout.scss";
 
-interface CheckoutProps {
-  setOpenCart: React.Dispatch<React.SetStateAction<boolean>>;
-}
 export default function Checkout({ setOpenCart }: CheckoutProps) {
   const navigate = useNavigate();
   useEffect(() => {
     setOpenCart(false);
   }, [setOpenCart]);
+
   return (
     <main className="bg-000000 pt-[94.5px] sm:pt-[90px]">
       <div className="bg-[#F2F2F2]">

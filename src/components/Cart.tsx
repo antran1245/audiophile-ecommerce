@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { CheckoutProps } from "../interfaces/CheckoutInterface";
 
-export default function Cart() {
+export default function Cart({ setOpenCart }: CheckoutProps) {
   const navigate = useNavigate();
 
   return (
-    <div className="absolute z-[3] h-[100%] w-[100%] bg-101010/50">
-      <div className="absolute top-[3%] right-[15%] w-[25%] rounded-[8px] bg-FFFFFF p-[31px]">
+    <div>
+      <div
+        className="absolute z-[3] h-[100%] w-[100%] bg-101010/50"
+        onClick={() => setOpenCart(false)}
+      ></div>
+      <div className="absolute top-[100px] right-[15%] z-[3] w-[25%] rounded-[8px] bg-FFFFFF p-[31px] xl:w-[40%] md:right-[50%] md:w-[90%] md:translate-x-[50%]">
         <div className="flex items-center justify-between">
           <p className="heading6">CART</p>
           <p className="body cursor-pointer text-000000/50 underline decoration-000000/50">

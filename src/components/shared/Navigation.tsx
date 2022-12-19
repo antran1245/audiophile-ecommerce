@@ -1,5 +1,6 @@
-import React, { SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { CheckoutProps } from "../../interfaces/CheckoutInterface";
 import logo from "../../assets/shared/desktop/logo.svg";
 import cart from "../../assets/shared/desktop/icon-cart.svg";
 import hamburger from "../../assets/shared/tablet/icon-hamburger.svg";
@@ -9,12 +10,7 @@ import speakers from "../../assets/shared/desktop/image-category-thumbnail-speak
 import arrow from "../../assets/shared/desktop/icon-arrow-right.svg";
 import "../../sass/navigation.scss";
 
-interface NavigationProps {
-  openCart: boolean;
-  setOpenCart: React.Dispatch<SetStateAction<boolean>>;
-}
-
-export default function Navigation({ openCart, setOpenCart }: NavigationProps) {
+export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
   const [show, setShow] = useState<boolean>(false);
   const navigate = useNavigate();
 
