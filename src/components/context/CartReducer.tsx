@@ -31,7 +31,7 @@ const addToCart = (
       (item) => item.id === product.id
     );
     if (productIndex < 0) {
-      updatedCart.push({ ...product, cartQuantity: 1 });
+      updatedCart.push({ ...product, cartQuantity: quantity });
     } else {
       const updateItem = { ...updatedCart[productIndex] };
       updateItem.cartQuantity += quantity;

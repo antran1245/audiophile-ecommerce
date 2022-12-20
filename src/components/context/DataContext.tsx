@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useReducer } from "react";
+import React, { ReactNode, useReducer } from "react";
 import file from "../../data/data.json";
 import ShopContext from "./ShopContext";
 import { ProductInterface } from "../../interfaces/ProductInterface";
@@ -9,10 +9,6 @@ export default function DataContext({ children }: { children: ReactNode }) {
     let localData = localStorage.getItem("cart");
     return { cart: localData ? localData : [] };
   });
-
-  useEffect(() => {
-    console.log(cartState.cart);
-  }, [cartState]);
 
   // adding # amount of the selected product (a json array object) to the cart
   const addToCart = (product: ProductInterface, quantity: number) => {
