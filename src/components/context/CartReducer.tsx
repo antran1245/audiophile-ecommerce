@@ -4,13 +4,14 @@ import { ProductInterface } from "../../interfaces/ProductInterface";
 export enum ProductKind {
   ADD_PRODUCT = "ADD_PRODUCT",
   REMOVE_PRODUCT = "REMOVE_PRODUCT",
+  REMOVE_ALL = "REMOVE_ALL",
 }
 // interface for the action
 interface ProductAction {
   type: ProductKind;
   productID?: number;
   product?: ProductInterface;
-  quantity: number;
+  quantity?: number;
 }
 // interface for state
 type ProductsState = {
@@ -21,7 +22,7 @@ type ProductsState = {
 const addToCart = (
   product: ProductInterface | undefined,
   state: any,
-  quantity: number
+  quantity: number | undefined
 ) => {
   // Current Cart to updated
   const updatedCart = [...state.cart];
@@ -44,7 +45,7 @@ const addToCart = (
 const removeFromCart = (
   productID: number | undefined,
   state: any,
-  quantity: number
+  quantity: number | undefined
 ) => {
   const updatedCart = [...state.cart];
   if (productID) {
@@ -54,6 +55,11 @@ const removeFromCart = (
   return { ...state, cart: updatedCart };
 };
 
+// Remove all from cart
+const removeAll = () => {
+  return { cart: [] };
+};
+
 export const CartReducer = (state: ProductsState, action: ProductAction) => {
   const { type, productID, product, quantity } = action;
   switch (type) {
@@ -61,6 +67,8 @@ export const CartReducer = (state: ProductsState, action: ProductAction) => {
       return addToCart(product, state, quantity);
     case ProductKind.REMOVE_PRODUCT:
       return removeFromCart(productID, state, quantity);
+    case ProductKind.REMOVE_ALL:
+      return removeAll();
     default:
       return state;
   }

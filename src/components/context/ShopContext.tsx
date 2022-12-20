@@ -7,4 +7,5 @@ export default React.createContext({
   cart: [],
   addToCart: (product: ProductInterface, quantity: number) => {},
   removeFromCart: (productID: number, quantity: number) => {},
+  removeAll: () => {},
 });
