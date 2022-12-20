@@ -24,7 +24,13 @@ export default function Cart({ setOpenCart }: CheckoutProps) {
         {/* Heading */}
         <div className="mb-[32px] flex items-center justify-between">
           <p className="heading6">CART</p>
-          <p className="body cursor-pointer text-000000/50 underline decoration-000000/50">
+          <p
+            className="body cursor-pointer text-000000/50 underline decoration-000000/50"
+            onClick={() => {
+              removeAll();
+              setTotal(0);
+            }}
+          >
             Remove all
           </p>
         </div>
