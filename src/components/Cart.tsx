@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CheckoutProps } from "../interfaces/CheckoutInterface";
 import ShopContext from "./context/ShopContext";

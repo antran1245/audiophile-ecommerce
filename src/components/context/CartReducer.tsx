@@ -49,8 +49,14 @@ const removeFromCart = (
 ) => {
   const updatedCart = [...state.cart];
   if (productID) {
-    const removeItem = updatedCart.findIndex((item) => item.id === productID);
-    updatedCart.splice(removeItem, 1);
+    const removeIndex = updatedCart.findIndex((item) => item.id === productID);
+    if (updatedCart[removeIndex].cartQuantity <= 1) {
+      updatedCart.splice(removeIndex, 1);
+    } else {
+      const updateItem = { ...updatedCart[removeIndex] };
+      updateItem.cartQuantity--;
+      updatedCart[removeIndex] = updateItem;
+    }
   }
   return { ...state, cart: updatedCart };
 };

@@ -31,7 +31,7 @@ export default function DataContext({ children }: { children: ReactNode }) {
         productID: productID,
         quantity: quantity,
       });
-    }, 700);
+    }, 200);
   };
 
   const removeAll = () => {
@@ -39,7 +39,7 @@ export default function DataContext({ children }: { children: ReactNode }) {
       dispatch({
         type: ProductKind.REMOVE_ALL,
       });
-    }, 700);
+    }, 200);
   };
   return (
     // pass the value to other components for access
