@@ -12,7 +12,7 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
   return (
     <main className="bg-000000 pt-[94.5px] sm:pt-[90px]">
       <div className="bg-[#F2F2F2]">
-        <p className="mx-auto w-[70%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
+        <p className="mx-auto w-[80%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
           <span
             className="cursor-pointer text-000000/50"
             onClick={() => navigate(-1)}
@@ -20,8 +20,9 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
             Go Back
           </span>
         </p>
-        <div className="mx-auto w-[70%] pb-[141px] xl:w-[80%] lg:w-[90%]">
-          <form className="w-[70%] rounded-[8px] bg-FFFFFF p-[48px] md:w-full md:py-[30px] md:px-[27px] sm:p-[24px]">
+        <div className="mx-auto flex w-[80%] justify-between pb-[141px] xl:w-[80%] lg:w-[90%] md:flex-col">
+          {/* Billing, Shipping, Payment form */}
+          <form className="w-[68%] rounded-[8px] bg-FFFFFF p-[48px] md:w-full md:py-[30px] md:px-[27px] sm:p-[24px]">
             <p className="heading3 mb-[41px]">CHECKOUT</p>
             {/* 
               Billing Details
@@ -97,6 +98,39 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
               </div>
             </div>
           </form>
+
+          {/* Summary */}
+          <div className="h-fit w-[30%] rounded-[8px] bg-FFFFFF py-[32px] px-[33px] md:mt-[32px] md:w-full">
+            <p className="heading6">SUMMARY</p>
+            {/* Put the items here */}
+            <div className="mb-[8px] flex items-center justify-between">
+              <p className="body text-000000/50">TOTAL</p>
+              <p className="text-[18px] font-[700] leading-[25px] text-000000">
+                $0
+              </p>
+            </div>
+            <div className="mb-[8px] flex items-center justify-between">
+              <p className="body text-000000/50">SHIPPING</p>
+              <p className="text-[18px] font-[700] leading-[25px] text-000000">
+                $0
+              </p>
+            </div>
+            <div className="mb-[24px] flex items-center justify-between">
+              <p className="body text-000000/50">VAT &#x28;INCLUDED&#x29;</p>
+              <p className="text-[18px] font-[700] leading-[25px] text-000000">
+                $0
+              </p>
+            </div>
+            <div className="mb-[32px] flex items-center justify-between">
+              <p className="body text-000000/50">GRAND TOTAL</p>
+              <p className="text-[18px] font-[700] leading-[25px] text-000000">
+                $0
+              </p>
+            </div>
+            <button className="button-1 w-full text-[13px] font-[700] leading-[18px] tracking-[1px]">
+              CONTINUE
+            </button>
+          </div>
         </div>
       </div>
     </main>
