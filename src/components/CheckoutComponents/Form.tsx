@@ -1,7 +1,9 @@
 export default function Form() {
   return (
     <form className="w-[68%] rounded-[8px] bg-FFFFFF p-[48px] md:w-full md:py-[30px] md:px-[27px] sm:p-[24px]">
-      <p className="heading3 mb-[41px]">CHECKOUT</p>
+      <p className="heading3 mb-[41px]">
+        <span className="text-CD2C2C">FAKE STORE</span> CHECKOUT
+      </p>
       {/* 
               Billing Details
             */}
