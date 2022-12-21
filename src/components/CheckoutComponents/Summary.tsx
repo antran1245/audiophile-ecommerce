@@ -1,14 +1,21 @@
-import { useContext } from "react";
-import ShopContext from "../context/ShopContext";
+import React, { SetStateAction } from "react";
+interface SummaryProps {
+  total: number;
+  vat: number;
+  shipping: number;
+  grandTotal: number;
+  cart: any[];
+  setShowThank: React.Dispatch<SetStateAction<boolean>>;
+}
 
-export default function Summary() {
-  const context = useContext(ShopContext);
-  const { cart } = context;
-  const total = cart.reduce(
-    (total, current) => total + current.cartQuantity * current.price,
-    0
-  );
-
+export default function Summary({
+  total,
+  vat,
+  shipping,
+  grandTotal,
+  cart,
+  setShowThank,
+}: SummaryProps) {
   return (
     <div className="h-fit w-[30%] rounded-[8px] bg-FFFFFF py-[32px] px-[33px] md:mt-[32px] md:w-full">
       <p className="heading6 mb-[31px]">SUMMARY</p>
@@ -38,7 +45,9 @@ export default function Summary() {
                     ""
                   )}
                 </p>
-                <p className="test-[14px] text-000000/50">${item.price}</p>
+                <p className="test-[14px] text-000000/50">
+                  ${item.price.toLocaleString("en-US")}
+                </p>
               </div>
             </div>
             <p className="body font-500 text-000000/50">x{item.cartQuantity}</p>
@@ -48,28 +57,31 @@ export default function Summary() {
       <div className="mb-[8px] mt-[32px] flex items-center justify-between">
         <p className="body text-000000/50">TOTAL</p>
         <p className="text-[18px] font-[700] leading-[25px] text-000000">
-          ${total}
+          ${total.toLocaleString("en-US")}
         </p>
       </div>
       <div className="mb-[8px] flex items-center justify-between">
         <p className="body text-000000/50">SHIPPING</p>
         <p className="text-[18px] font-[700] leading-[25px] text-000000">
-          ${cart.length > 0 ? "50" : "0"}
+          ${shipping}
         </p>
       </div>
       <div className="mb-[24px] flex items-center justify-between">
         <p className="body text-000000/50">VAT &#x28;INCLUDED&#x29;</p>
         <p className="text-[18px] font-[700] leading-[25px] text-000000">
-          ${Math.floor(total * 0.2)}
+          ${vat.toLocaleString("en-US")}
         </p>
       </div>
       <div className="mb-[32px] flex items-center justify-between">
         <p className="body text-000000/50">GRAND TOTAL</p>
         <p className="text-[18px] font-[700] leading-[25px] text-000000">
-          ${total + Math.floor(total * 0.2) + (cart.length > 0 ? 50 : 0)}
+          ${grandTotal.toLocaleString("en-US")}
         </p>
       </div>
-      <button className="button-1 w-full text-[13px] font-[700] leading-[18px] tracking-[1px]">
+      <button
+        className="button-1 w-full text-[13px] font-[700] leading-[18px] tracking-[1px]"
+        onClick={() => setShowThank(true)}
+      >
         CONTINUE & PAY
       </button>
     </div>
