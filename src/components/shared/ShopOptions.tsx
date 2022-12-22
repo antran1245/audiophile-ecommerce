@@ -17,7 +17,7 @@ export default function ShopOptions() {
   return (
     // Shop options
     // Pass Tailwind CSS classes from sass file, home.scss, to elements.
-    <section id="shop">
+    <div id="shop">
       <div className={`cards-container`}>
         <div className="card" onClick={() => transferToPage("headphones")}>
           <img src={headphones} alt="headphones" />
@@ -47,6 +47,6 @@ export default function ShopOptions() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

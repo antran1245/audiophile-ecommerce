@@ -14,6 +14,9 @@ export default function Category() {
   const [typeOfCategory, getType] = useState<string | undefined>("");
   const [products, setProducts] = useState<DataInterface>([]);
 
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: -100 });
+  }, []);
   // initial setup of the displaying items based on pass of params
   // params.type be headphones, earphones, speakers
   useEffect(() => {

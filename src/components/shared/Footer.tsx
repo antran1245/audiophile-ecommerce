@@ -6,7 +6,7 @@ import instagram from "../../assets/shared/desktop/icon-instagram.svg";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col items-center bg-101010">
+    <div className="flex flex-col items-center bg-101010">
       <nav className="relative flex w-[70%] justify-between pt-[75px] md:w-[80%] md:flex-col md:pt-[60px] xs:w-[90%] xs:justify-center xs:pt-0">
         <div className="absolute top-0 h-[4px] w-[101px] bg-D87D4A xs:relative xs:mx-auto xs:mb-[48px]"></div>
         <Link to="/audiophile-ecommerce/">
@@ -92,6 +92,6 @@ export default function Footer() {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
