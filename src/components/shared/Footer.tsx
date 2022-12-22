@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 import facebook from "../../assets/shared/desktop/icon-facebook.svg";
 import twitter from "../../assets/shared/desktop/icon-twitter.svg";
@@ -8,24 +9,38 @@ export default function Footer() {
     <section className="flex flex-col items-center bg-101010">
       <nav className="relative flex w-[70%] justify-between pt-[75px] md:w-[80%] md:flex-col md:pt-[60px] xs:w-[90%] xs:justify-center xs:pt-0">
         <div className="absolute top-0 h-[4px] w-[101px] bg-D87D4A xs:relative xs:mx-auto xs:mb-[48px]"></div>
-        <img
-          src={logo}
-          alt="logo"
-          className="cursor-pointer md:mb-[32px] md:w-[25%] sm:w-[32.5%] xs:mx-auto xs:w-[40%]"
-        />
+        <Link to="/audiophile-ecommerce/">
+          <img
+            src={logo}
+            alt="logo"
+            className="cursor-pointer md:mb-[32px] md:w-[25%] sm:w-[32.5%] xs:mx-auto xs:w-[40%]"
+          />
+        </Link>
         <div className="flex items-center xs:flex-col">
-          <p className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0">
+          <Link
+            to="/audiophile-ecommerce/"
+            className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0"
+          >
             HOME
-          </p>
-          <p className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0">
+          </Link>
+          <Link
+            to="/Category/headphones"
+            className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0"
+          >
             HEADPHONES
-          </p>
-          <p className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0">
+          </Link>
+          <Link
+            to="/Category/speakers"
+            className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0"
+          >
             SPEAKERS
-          </p>
-          <p className="subtitle cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A">
+          </Link>
+          <Link
+            to="/Category/earphones"
+            className="subtitle text-FFFFFF hover:text-D87D4A"
+          >
             EARPHONES
-          </p>
+          </Link>
         </div>
       </nav>
       <div className="mt-[36px] flex w-[70%] items-end md:w-[80%] md:flex-col xs:w-[90%]">

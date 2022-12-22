@@ -32,20 +32,28 @@ export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
             className="hidden cursor-pointer md:mr-[42px] md:block xs:mr-[0]"
             onClick={() => setShow(!show)}
           />
+          <Link to="/audiophile-ecommerce/">
+            <img
+              src={logo}
+              alt="logo"
+              className="hidden cursor-pointer xs:block"
+            />
+          </Link>
+        </div>
+        <Link to="/audiophile-ecommerce/">
           <img
             src={logo}
             alt="logo"
-            className="block cursor-pointer xs:hidden"
+            className="hidden cursor-pointer xs:block"
           />
-        </div>
-        <img src={logo} alt="logo" className="hidden cursor-pointer xs:block" />
+        </Link>
 
         {/* 
           Dynamic Links to the Category.tsx page
         */}
         <div className="block md:hidden">
           <Link
-            to=" "
+            to="/audiophile-ecommerce/"
             className="subtitle mr-[34px] text-FFFFFF hover:text-D87D4A"
           >
             HOME
