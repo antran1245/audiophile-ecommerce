@@ -51,10 +51,10 @@
   }
 .form-group-radio:hover,
 input:active,
-input[type="radio"]:hover {
+input[type="radio"]:hover,input[type="radio"].active {
   border: 1px solid theme("colors.D87D4A");
 }
-.form-group .form-label.error {
+.form-group label.error span {
   color: theme("colors.CD2C2C");
 }
 input[type="text"].error {

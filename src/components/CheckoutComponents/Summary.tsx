@@ -5,7 +5,6 @@ interface SummaryProps {
   shipping: number;
   grandTotal: number;
   cart: any[];
-  setShowThank: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Summary({
@@ -14,7 +13,6 @@ export default function Summary({
   shipping,
   grandTotal,
   cart,
-  setShowThank,
 }: SummaryProps) {
   return (
     <div className="h-fit w-[30%] rounded-[8px] bg-FFFFFF py-[32px] px-[33px] md:mt-[32px] md:w-full">
@@ -80,10 +78,13 @@ export default function Summary({
       </div>
       <button
         className="button-1 w-full text-[13px] font-[700] leading-[18px] tracking-[1px]"
-        onClick={() => setShowThank(true)}
+        form="checkoutForm"
       >
         CONTINUE & PAY
       </button>
+      <p className="text-[12px] text-000000/50">
+        Beta Version. Thank You Overlay will show with blank form or not.
+      </p>
     </div>
   );
 }

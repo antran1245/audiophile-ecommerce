@@ -19,7 +19,7 @@ export default function Detail() {
       <div className="bg-FFFFFF">
         <p className="mx-auto w-[70%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
           <span
-            className="cursor-pointer text-000000/50"
+            className="cursor-pointer text-000000/50 hover:text-D87D4A"
             onClick={() => navigate(-1)}
           >
             Go Back

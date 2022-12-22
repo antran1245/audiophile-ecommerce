@@ -42,7 +42,7 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
       <div className="bg-[#F2F2F2]">
         <p className="mx-auto w-[80%] pb-[56px] pt-[79px] xl:w-[80%] lg:w-[90%]">
           <span
-            className="cursor-pointer text-000000/50"
+            className="cursor-pointer text-000000/50 hover:text-D87D4A"
             onClick={() => navigate(-1)}
           >
             Go Back
@@ -50,7 +50,7 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
         </p>
         <div className="mx-auto flex w-[80%] justify-between pb-[141px] xl:w-[80%] lg:w-[90%] md:flex-col">
           {/* Billing, Shipping, Payment form */}
-          <Form />
+          <Form setShowThank={setShowThank} />
 
           {/* Summary */}
           <Summary
@@ -59,7 +59,6 @@ export default function Checkout({ setOpenCart }: CheckoutProps) {
             vat={vat}
             grandTotal={grandTotal}
             cart={cart}
-            setShowThank={setShowThank}
           />
         </div>
       </div>
