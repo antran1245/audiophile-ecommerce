@@ -4,6 +4,8 @@ Create a e-commerce website using TypeScript and TailWind CSS
 
 A **Front End** focus website with a **json file** as data.
 
+[**Live Link**](https://antran1245.github.io/audiophile-ecommerce/)
+
 # Packages
 
 - tailWind css
@@ -28,6 +30,8 @@ A **Front End** focus website with a **json file** as data.
 - SASS and Tailwind CSS
   - most div classes are using tailwind css
   - shopOption -> use `@apply`
+    - require `foo:bar` after `@apply` in a class to deal with `resolve-url-loader`
+      - Credit to [thecrypticace](https://github.com/tailwindlabs/tailwindcss/issues/8806)
 
 # Credit
 

@@ -36,7 +36,7 @@ export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
             <img
               src={logo}
               alt="logo"
-              className="hidden cursor-pointer xs:block"
+              className="block cursor-pointer xs:hidden"
             />
           </Link>
         </div>
