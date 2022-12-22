@@ -28,9 +28,9 @@ export default function Home() {
         <div className="relative flex w-[70%] items-center md:w-[100%] md:justify-center">
           <div className="absolute z-[2] w-[40%] xl:mt-[8vw] xl:w-[50%] md:text-center sm:w-[60%] xs:w-[80%]">
             <p className="overline-text text-FFFFFF/50">NEW PRODUCT</p>
-            <p className="heading1 xsm:mt-[10px] s:mt-[24px] mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
+            <h1 className="heading1 xsm:mt-[10px] s:mt-[24px] mt-[24px] text-FFFFFF lg:mt-[10px] md:mt-[24px]">
               XX99 Mark II Headphones
-            </p>
+            </h1>
             <p className="body mt-[24px] text-FFFFFF/75 lg:mt-[10px] md:mt-[24px] sm:mt-[10px] xs:mt-[24px]">
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
@@ -94,9 +94,9 @@ export default function Home() {
             className="relative z-[1] hidden w-[40%] max-w-[410px] xs:block "
           />
           <div className="relative z-[1] w-[25%] lg:mb-[64px] lg:w-[50%] lg:text-center sm:w-[70%] xs:mb-[0]">
-            <p className="heading1 mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
+            <h1 className="heading1 mt-[37px] text-FFFFFF lg:mt-[64px] xs:mt-[32px]">
               ZX9 SPEAKER
-            </p>
+            </h1>
             <p className="body mt-[24px] mb-[40px] text-FFFFFF xs:mb-[24px]">
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
@@ -115,7 +115,7 @@ export default function Home() {
       */}
       <section id="speaker-short" className="flex justify-center">
         <div className="w-[70%] py-[101px] px-[95px] xl:w-[80%] lg:w-[90%] md:px-[62px] xs:px-[24px]">
-          <p className="heading4">ZX7 SPEAKER</p>
+          <h4 className="heading4">ZX7 SPEAKER</h4>
           <button
             className="button-4 mt-[32px] "
             onClick={() => seeProduct("zx7-speaker")}
@@ -145,7 +145,7 @@ export default function Home() {
             />
           </picture>
           <div className="h-[100%] w-[49%] rounded-[8px] bg-F1F1F1 py-[101px] pl-[95px] pr-[198px] md:pl-[41px] md:pr-[51px] xs:mt-[24px] xs:h-auto xs:w-[100%] xs:py-[41px] xs:pl-[24px] xs:pr-[56px]">
-            <p className="heading4">YX1 EARPHONES</p>
+            <h4 className="heading4">YX1 EARPHONES</h4>
             <button
               className="button-4 mt-[32px]"
               onClick={() => seeProduct("yx1-earphones")}

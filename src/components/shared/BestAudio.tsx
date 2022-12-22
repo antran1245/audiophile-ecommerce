@@ -3,10 +3,10 @@ export default function BestAudio() {
     <section className="my-[200px] flex justify-center md:my-[96px] sm:my-[120px]">
       <div className="flex w-[70%] items-center justify-between xl:w-[80%] lg:w-[90%] md:flex-col">
         <div className="w-[50%] pr-[125px] md:order-2 md:mt-[63px] md:w-[100%] md:pr-0 md:text-center sm:mt-[40px]">
-          <p className="heading2 sm:heading4 md:mx-auto md:w-[60%] sm:w-[90%]">
+          <h2 className="heading2 sm:heading4 md:mx-auto md:w-[60%] sm:w-[90%]">
             BRINGING YOU THE <span className="text-D87D4A">BEST</span> AUDIO
             GEAR
-          </p>
+          </h2>
           <p className="body mt-[32px] md:mx-auto md:w-[80%] sm:w-[90%]">
             Located at the heart of New York City, Audiophile is the premier
             store for high end headphones, earphones, speakers, and audio

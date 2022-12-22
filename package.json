@@ -2,7 +2,7 @@
   "name": "audiophile-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antran1245.github.io/audiophile-ecommerce/",
+  "homepage": "https://antran1245.github.io/audiophile-ecommerce",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

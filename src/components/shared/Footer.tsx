@@ -18,7 +18,7 @@ export default function Footer() {
         </Link>
         <div className="flex items-center xs:flex-col">
           <Link
-            to="/audiophile-ecommerce/"
+            to="/audiophile-ecommerce"
             className="subtitle mr-[34px] cursor-pointer tracking-[2px] text-FFFFFF hover:text-D87D4A xs:mr-0"
           >
             HOME

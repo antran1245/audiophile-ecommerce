@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  HashRouter,
+  Navigate,
+} from "react-router-dom";
 import Navigation from "./components/shared/Navigation";
 import Home from "./components/Home";
 import Category from "./components/Category";
@@ -14,7 +20,7 @@ function App() {
   const [openCart, setOpenCart] = useState<boolean>(false);
   return (
     <DataContext>
-      <BrowserRouter>
+      <HashRouter basename="/">
         <div className="relative">
           <Navigation openCart={openCart} setOpenCart={setOpenCart} />
           {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
@@ -26,10 +32,14 @@ function App() {
               path="/checkout"
               element={<Checkout setOpenCart={setOpenCart} />}
             />
+            <Route
+              path="*"
+              element={<Navigate to="/audiophile-ecommerce/" replace />}
+            />
           </Routes>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </DataContext>
   );
 }

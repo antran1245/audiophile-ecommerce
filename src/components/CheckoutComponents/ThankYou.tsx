@@ -152,7 +152,7 @@ export default function ThankYou({
         ) : null}
         <button
           className="button-1 mt-[46px] w-full text-[13px] font-[700] leading-[18px] tracking-[1px]"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/audiophile-ecommerce")}
         >
           BACK TO HOME
         </button>

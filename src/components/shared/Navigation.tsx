@@ -32,7 +32,7 @@ export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
             className="hidden cursor-pointer md:mr-[42px] md:block xs:mr-[0]"
             onClick={() => setShow(!show)}
           />
-          <Link to="/audiophile-ecommerce/">
+          <Link to="/audiophile-ecommerce">
             <img
               src={logo}
               alt="logo"
@@ -40,7 +40,7 @@ export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
             />
           </Link>
         </div>
-        <Link to="/audiophile-ecommerce/">
+        <Link to="/audiophile-ecommerce">
           <img
             src={logo}
             alt="logo"
@@ -53,7 +53,7 @@ export default function Navigation({ openCart, setOpenCart }: CheckoutProps) {
         */}
         <div className="block md:hidden">
           <Link
-            to="/audiophile-ecommerce/"
+            to="/audiophile-ecommerce"
             className="subtitle mr-[34px] text-FFFFFF hover:text-D87D4A"
           >
             HOME
