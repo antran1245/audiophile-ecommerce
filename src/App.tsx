@@ -19,7 +19,7 @@ function App() {
           <Navigation openCart={openCart} setOpenCart={setOpenCart} />
           {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/audiophile-ecommerce" element={<Home />} />
             <Route path="/Category/:type/" element={<Category />} />
             <Route path="/Category/:type/detail/:id" element={<Detail />} />
             <Route

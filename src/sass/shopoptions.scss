@@ -3,22 +3,26 @@
   @apply flex;
   @apply justify-center;
   @apply mt-[120px] md:mt-[96px] xs:mt-[40px];
+  foo: bar; // a fix to the resolve-url-loader -> Credit go to : https://github.com/tailwindlabs/tailwindcss/issues/8806
 
   .cards-container {
     @apply flex items-end;
     @apply flex-row xs:flex-col;
     @apply w-[70%] xl:w-[80%] lg:w-[90%];
+    foo: bar;
 
     .card {
       @apply relative;
       @apply flex flex-col items-center;
       @apply w-[30%] xl:w-[31.5%] lg:w-[33%] xs:w-full;
       @apply h-[284px] lg:h-[217px];
+      foo: bar;
 
       img {
         @apply relative z-[2] cursor-pointer;
         @apply xs:mt-[10px];
         @apply w-[60%] xl:w-[80%] lg:w-[50%] md:w-[60%] sm:w-[90%] xs:w-[40%];
+        foo: bar;
       }
 
       div {
@@ -26,18 +30,22 @@
         @apply flex flex-col items-center justify-end;
         @apply w-full;
         @apply h-[204px] lg:h-[165px];
+        foo: bar;
 
         .nav-title {
           @apply z-[3] mb-[17px];
+          foo: bar;
         }
         p:not(.nav-title) {
           @apply z-[3] mb-[22px] flex items-center;
+          foo: bar;
         }
       }
     }
     .card:hover {
       .button-3 {
         @apply text-D87D4A;
+        foo: bar;
       }
     }
   }
